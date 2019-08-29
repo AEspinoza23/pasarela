@@ -2,6 +2,14 @@
   margin-top: 120px
 }
 
+.colorConviasa {
+  background-color: #EE7500;
+}
+
+.colorConviasaG{
+  background-color: #717171;
+}
+
 #primary {
   padding: 2rem;
   background-color: #EE7500;
