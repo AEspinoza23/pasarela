@@ -3,11 +3,9 @@ import {MDBRow, MDBCol, MDBNavbar, } from 'mdbreact'
 import { Progress } from 'reactstrap'
 import LogoConviasa from "./img/logo.svg"
 import BanderaV from "./img/venezuela.png"
+import { HideAt } from 'react-with-breakpoints';
 
 class index extends Component {
-  // stepper
-  
-  // fin stepper
   render() {
     return (
       <div>
@@ -16,22 +14,26 @@ class index extends Component {
             <img src={LogoConviasa} alt="logo" />
           </MDBCol>
           <MDBCol md="7">
-          <Progress multi style={{height:"2em"}}>
-            <Progress bar className="green" value="30"><p className="h5 mt-2">Vuelos</p></Progress>
-            <Progress bar className="green" value="30"><p className="h5 mt-2">Pasajeros y Pago</p></Progress>
-            <Progress bar className="green" value="30" ><p className="h5 mt-2">Final</p></Progress>
-          </Progress>
+          <HideAt breakpoint="mediumAndBelow">
+            <Progress multi style={{height:"2em"}}>
+              <Progress bar className="green" value="30"><p className="h5 mt-2">Vuelos</p></Progress>
+              <Progress bar className="green" value="30"><p className="h5 mt-2">Pasajeros y Pago</p></Progress>
+              <Progress bar className="green" value="40" ><p className="h5 mt-2">Final</p></Progress>
+            </Progress>
+          </HideAt>
           </MDBCol>
-          <MDBCol md="2">
-            <MDBRow>
-              <MDBCol size="1">
-                <img src={BanderaV} alt="Contacto"/>
-              </MDBCol>
-              <MDBCol>
-              <p className="white-text">05002668427</p>
-              </MDBCol>
-            </MDBRow>
-          </MDBCol>
+          <HideAt breakpoint="mediumAndBelow">
+            <MDBCol md="2">
+              <MDBRow>
+                <MDBCol size="1">
+                  <img src={BanderaV} alt="Contacto"/>
+                </MDBCol>
+                <MDBCol>
+                <strong className="white-text">05002668427</strong>
+                </MDBCol>
+              </MDBRow>
+            </MDBCol>
+          </HideAt>
         </MDBNavbar>
       </div>
     )

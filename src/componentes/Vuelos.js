@@ -6,65 +6,69 @@ import {
   MDBIcon,
 } from "mdbreact";
 import "../index.css";
+import { HideAt } from 'react-with-breakpoints';
 
 export default class Contenedor extends Component {
   render() {
     return (
       <div className="marginTop">
-        <MDBRow around className="mt-5">
-          <MDBCol sm="8">
-            <MDBRow >
+        <MDBRow around>
+          <MDBCol xs="12" lg="8">
+            <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
                   <strong>Seleccione otra fecha de ída</strong> <MDBIcon size="lg" className="ml-3" far icon="calendar-alt" />
                 </MDBRow>
                 <MDBRow id="secondary" between>
-                  <MDBCol xs="12" sm="5">
+                  <MDBCol>
                     <MDBRow>
-                      <MDBCol>
+                      <MDBCol size="4">
                         <MDBRow>
-                        <strong>DíaNombre</strong>
+                          <strong>Jueves</strong>
                         </MDBRow>
                         <MDBRow className="my-2">
-                          <strong>DíaNumero, Mes</strong>
+                          <strong>30</strong>
+                        </MDBRow>
+                        <MDBRow>
+                          <strong>Noviembre</strong>
                         </MDBRow>
                       </MDBCol>
                       <MDBCol>
                         <MDBRow>
-                          <MDBIcon icon="plane-departure" /> <strong>Ciudad, País</strong>
+                          <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
                         </MDBRow>
                         <MDBRow className="my-3">
-                          <MDBIcon icon="plane-arrival" /> <strong>Ciudad, País</strong>
+                          <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
-                  <MDBCol xs="12" sm="5">
+                  <MDBCol  sm="12" md="5" className="pt-3">
                     <MDBRow>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Económica</strong>
+                          <strong className="h6">Económica</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Ejecutiva</strong>
+                          <strong className="h6">Ejecutiva</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Primera</strong>
+                          <strong className="h6">Primera</strong>
                         </MDBRow>
                         <MDBRow center>
                           <strong>Clase</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-1">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -72,11 +76,11 @@ export default class Contenedor extends Component {
                   </MDBCol>
                 </MDBRow>
                 <MDBRow id="accent" between>
-                  <MDBCol xs="12" sm="6" md="4">
+                  <MDBCol className="h6" sm="12" md="4">
                     <MDBRow around>
-                      <MDBCol >
-                        <MDBRow start>
-                          <MDBCol size="5">
+                      <MDBCol>
+                        <MDBRow>
+                          <MDBCol>
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -84,7 +88,7 @@ export default class Contenedor extends Component {
                               <strong>12:30</strong>
                             </MDBRow>
                           </MDBCol>
-                          <MDBCol size="5">
+                          <MDBCol>
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -111,7 +115,7 @@ export default class Contenedor extends Component {
                           <strong>Comida:</strong>
                         </MDBRow>
                         <MDBRow>
-                          <strong>Número de vuelo:</strong>
+                          <strong>Num. vuelo:</strong>
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
@@ -123,7 +127,7 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                           Económica
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -132,16 +136,16 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                             Ejecutiva
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
-                      <MDBCol id="cajasClases" className="border-left border-white">
+                      <MDBCol id="cajasClases" className="border-right border-white">
                         <input type="radio" /> Clase: <br />
                         <MDBRow center>
                           Primera Clase
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -155,34 +159,37 @@ export default class Contenedor extends Component {
                 <MDBRow id="primary">
                   <strong>Seleccione otra fecha de ída</strong> <MDBIcon size="lg" className="ml-3" far icon="calendar-alt" />
                 </MDBRow>
-                <MDBRow id="secondary" between>
-                  <MDBCol xs="12" sm="5">
+                <MDBRow className="h6"  id="secondary" between>
+                  <MDBCol>
                     <MDBRow>
-                      <MDBCol>
+                      <MDBCol size="4">
                         <MDBRow>
-                        <strong>DíaNombre</strong>
+                        <strong>Viernes</strong>
                         </MDBRow>
                         <MDBRow className="my-2">
-                          <strong>DíaNumero, Mes</strong>
+                          <strong>30</strong>
+                        </MDBRow>
+                        <MDBRow>
+                          <strong>Diciembre</strong>
                         </MDBRow>
                       </MDBCol>
                       <MDBCol>
                         <MDBRow>
-                          <MDBIcon icon="plane-departure" /> <strong>Ciudad, País</strong>
+                          <strong> <MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
                         </MDBRow>
                         <MDBRow className="my-3">
-                          <MDBIcon icon="plane-arrival" /> <strong>Ciudad, País</strong>
+                          <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
-                  <MDBCol xs="12" sm="5">
+                  <MDBCol sm="12" md="5" className="pt-3">
                     <MDBRow>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
                           <strong>Económica</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -190,30 +197,30 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                           <strong>Ejecutiva</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Primera</strong>
+                          <strong >Primera</strong>
                         </MDBRow>
                         <MDBRow center>
                           <strong>Clase</strong>
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="my-2">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
-                <MDBRow id="accent" between>
+                <MDBRow className="h6" id="accent" between>
                   <MDBCol xs="12" sm="6" md="4">
                     <MDBRow around>
-                      <MDBCol >
+                      <MDBCol>
                         <MDBRow start>
-                          <MDBCol size="5">
+                          <MDBCol  size="6">
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -221,7 +228,7 @@ export default class Contenedor extends Component {
                               <strong>12:30</strong>
                             </MDBRow>
                           </MDBCol>
-                          <MDBCol size="5">
+                          <MDBCol size="6">
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -248,7 +255,7 @@ export default class Contenedor extends Component {
                           <strong>Comida:</strong>
                         </MDBRow>
                         <MDBRow>
-                          <strong>Número de vuelo:</strong>
+                          <strong>Num. vuelo:</strong>
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
@@ -288,16 +295,24 @@ export default class Contenedor extends Component {
               </MDBCol>
             </MDBRow>
           </MDBCol>
-          <MDBCol sm="4">
-            <MDBRow center>
-              <MDBBtn block color="orange">Salir</MDBBtn>
-            </MDBRow>
+          <MDBCol className="h6" sm="12" md="12" lg="4">
+            <HideAt breakpoint="mediumAndBelow">
+              <MDBRow center>
+                <MDBBtn size="lg" block color="orange">Salir</MDBBtn>
+              </MDBRow>
+            </HideAt>
             <MDBRow className="mt-1" id="primary">
               Su selección
             </MDBRow>
             <MDBRow id="secondary">
               <MDBCol>
-                <MDBBtn block color="orange">Reservar</MDBBtn>
+                <MDBRow>
+                  <MDBBtn block color="orange">Reservar</MDBBtn>
+                </MDBRow>
+                <MDBRow>
+                </MDBRow>
+                <MDBRow>
+                </MDBRow>
               </MDBCol>
             </MDBRow>
           </MDBCol>
