@@ -10,7 +10,7 @@ import "../index.css";
 export default class Contenedor extends Component {
   render() {
     return (
-      <div>
+      <div className="marginTop">
         <MDBRow around className="mt-5">
           <MDBCol sm="8">
             <MDBRow >
