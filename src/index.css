@@ -1,0 +1,40 @@
+#primary {
+  padding: 2rem;
+  background-color: #EE7500;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px
+}
+
+#secondary {
+  padding: 2rem;
+  background-color: #717171;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px
+}
+
+
+#accent {
+  padding: 2rem;
+  background-color: #eeeeee;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  color: black;
+  text-align: center;
+  border-radius: 2px
+}
+
+#cajasClases {
+  padding: 1rem;
+  background-color: #717171;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px
+}
