@@ -26,7 +26,7 @@ export default class Contenedor extends Component {
                         <MDBRow>
                           <strong>Jueves</strong>
                         </MDBRow>
-                        <MDBRow className="my-2">
+                        <MDBRow className="my-2 h3">
                           <strong>30</strong>
                         </MDBRow>
                         <MDBRow>
@@ -166,7 +166,7 @@ export default class Contenedor extends Component {
                         <MDBRow>
                         <strong>Viernes</strong>
                         </MDBRow>
-                        <MDBRow className="my-2">
+                        <MDBRow className="my-2 h3">
                           <strong>30</strong>
                         </MDBRow>
                         <MDBRow>
@@ -267,7 +267,7 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                           Económica
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -276,7 +276,7 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                             Ejecutiva
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -285,7 +285,7 @@ export default class Contenedor extends Component {
                         <MDBRow center>
                           Primera Clase
                         </MDBRow>
-                        <MDBRow center className="my-3">
+                        <MDBRow center className="mt-3">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
@@ -304,9 +304,9 @@ export default class Contenedor extends Component {
             <MDBRow className="mt-1" id="primary">
               Su selección
             </MDBRow>
-            <MDBRow id="secondary">
+            <MDBRow  id="secondary">
               <MDBCol>
-                <MDBRow>
+                <MDBRow center>
                   <MDBBtn block color="orange">Reservar</MDBBtn>
                 </MDBRow>
                 <MDBRow>
