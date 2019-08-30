@@ -11,8 +11,8 @@ class App extends Component {
       <div>
         <Header />
         <Vuelos />
-        <PasajerosPago/>
-        <Footer/>
+        <PasajerosPago />
+        <Footer />
       </div>
     );
   }
