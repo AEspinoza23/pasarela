@@ -4,11 +4,23 @@ import {
   MDBCol,
   MDBBtn,
   MDBIcon,
+  MDBCollapse,
 } from "mdbreact";
 import "../index.css";
 import { HideAt } from 'react-with-breakpoints';
 
 export default class Contenedor extends Component {
+
+  state = {
+    collapseID: false
+  }
+  
+  toggleCollapse = collapseID => () => {
+    this.setState(prevState => ({
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+    }));
+  }
+
   render() {
     return (
       <div className="marginTop">
@@ -309,9 +321,53 @@ export default class Contenedor extends Component {
                 <MDBRow center>
                   <MDBBtn block color="orange">Reservar</MDBBtn>
                 </MDBRow>
-                <MDBRow>
+                <MDBRow className="mt-3">
+                  <MDBCol>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
+                      <MDBCol md="11">
+                        <strong className="ml-4 text-left h5 white-text">IDA</strong>
+                      </MDBCol>
+                      <MDBCol md="1">
+                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                      </MDBCol>
+                    </MDBRow>
+                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                      <MDBRow id="accent" between>
+                      </MDBRow>
+                    </MDBCollapse>
+                  </MDBCol>
                 </MDBRow>
                 <MDBRow>
+                  <MDBCol>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
+                      <MDBCol md="11">
+                        <strong className="ml-4 text-left h5 white-text">VUELTA</strong>
+                      </MDBCol>
+                      <MDBCol md="1">
+                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                      </MDBCol>
+                    </MDBRow>
+                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                      <MDBRow id="accent" between>
+                      </MDBRow>
+                    </MDBCollapse>
+                  </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                  <MDBCol>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
+                      <MDBCol md="2">
+                        <strong className="text-left h5 white-text">Detalles</strong>
+                      </MDBCol>
+                      <MDBCol md="1">
+                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                      </MDBCol>
+                    </MDBRow>
+                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                      <MDBRow id="accent" between>
+                      </MDBRow>
+                    </MDBCollapse>
+                  </MDBCol>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
