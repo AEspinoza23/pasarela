@@ -19,7 +19,7 @@
 }
 
 #primary {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #EE7500;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;
@@ -29,7 +29,7 @@
 }
 
 #secondary {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #717171;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;
@@ -40,7 +40,7 @@
 
 
 #accent {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #eeeeee;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;

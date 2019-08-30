@@ -3,6 +3,7 @@ import Vuelos from "./componentes/Vuelos";
 import Footer from "./componentes/Footer";
 import Header from "./componentes/Header"
 import PasajerosPago from "./componentes/PasajerosPago"
+import Resumenfinal from './componentes/resumenFinal'
 
 class App extends Component {
   
@@ -12,6 +13,7 @@ class App extends Component {
         <Header />
         <Vuelos />
         <PasajerosPago />
+        <Resumenfinal />
         <Footer />
       </div>
     );
