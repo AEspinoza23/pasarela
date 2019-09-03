@@ -149,7 +149,7 @@ class PasajerosPago extends Component {
                     </MDBCol>
                   </MDBRow>
                 </MDBCollapse>
-                <MDBRow className="py-3">
+                <MDBRow className="pb-1">
                 </MDBRow>
                 {/* fin Collapse Adulto */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
@@ -203,7 +203,7 @@ class PasajerosPago extends Component {
                     </MDBCol>
                   </MDBRow>
                 </MDBCollapse>
-                <MDBRow className="py-3">
+                <MDBRow className="pb-1">
                 </MDBRow>
                 {/* finCollapse Nino */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
@@ -257,13 +257,11 @@ class PasajerosPago extends Component {
                     </MDBCol>
                   </MDBRow>
                 </MDBCollapse>
-                <MDBRow className="py-3">
-                </MDBRow>
                 {/* fin Collapse Infantes */}
               </MDBCol>
             </MDBRow>
             {/* formulario Pago Debito */}
-            <MDBRow className="mt-4">
+            <MDBRow className="mt-1">
               <MDBCol className="colorAccent">
                 <MDBRow className="colorConviasa py-4">
                   <MDBCol>
@@ -462,7 +460,7 @@ class PasajerosPago extends Component {
                 <MDBIcon icon="angle-down" size="2x" className="white-text"/>
               </MDBCol>
             </MDBRow>
-            <MDBCollapse id="TasasyRecargos" isOpen={this.state.collapseTasasyRecargos} className="mt-1 white">
+            <MDBCollapse id="TasasyRecargos" isOpen={this.state.collapseTasasyRecargos} className="white">
               <MDBRow id="primary">
                 <MDBCol className="border-bottom border-light">
                   <MDBRow end><p className="h6">*AJ</p></MDBRow>
