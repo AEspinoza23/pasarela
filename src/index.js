@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App";
 import { BreakpointsProvider } from 'react-with-breakpoints';
 
+
 const breakpoints = {
   small: 468,
   medium: 768,

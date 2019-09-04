@@ -7,7 +7,8 @@ import {
   MDBCollapse,
 } from "mdbreact";
 import "../index.css";
-import { HideAt } from 'react-with-breakpoints';
+import { HideAt, ShowAt } from 'react-with-breakpoints';
+import Datepicker from './Datepicker'
 
 export default class Contenedor extends Component {
 
@@ -24,12 +25,17 @@ export default class Contenedor extends Component {
   render() {
     return (
       <div className="marginTop">
+        <MDBCol className="colorConviasa mb-1">
+          <ShowAt breakpoint="mediumAndBelow">
+              <MDBBtn size="lg" block color="orange">Salir</MDBBtn>
+          </ShowAt>
+        </MDBCol>
         <MDBRow around>
           <MDBCol xs="12" lg="8">
             <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de ída</strong> <MDBIcon size="lg" className="ml-3" far icon="calendar-alt" />
+                  <strong>Seleccione otra fecha de ída</strong>  <Datepicker  />
                 </MDBRow>
                 <MDBRow id="secondary" between>
                   <MDBCol>
@@ -133,35 +139,37 @@ export default class Contenedor extends Component {
                     </MDBRow>
                   </MDBCol>
                   <MDBCol md="5">
-                    <MDBRow>
-                      <MDBCol id="cajasClases" className="border-left border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                          Económica
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol id="cajasClases" className="border-left border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                            Ejecutiva
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol id="cajasClases" className="border-right border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                          Primera Clase
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
+                    <form>
+                      <MDBRow>
+                        <MDBCol id="cajasClases" className="border-left border-white">
+                          <input type="radio" name="cajasIda" value="O" /> Clase: <br />
+                          <MDBRow center>
+                            Económica
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol id="cajasClases" className="border-left border-white">
+                          <input type="radio" name="cajasIda" value="P" /> Clase: <br />
+                          <MDBRow center>
+                              Ejecutiva
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol id="cajasClases" className="border-right border-white">
+                          <input type="radio" name="cajasIda" value="W" /> Clase: <br />
+                          <MDBRow center>
+                            Primera Clase
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>  
+                    </form>
                   </MDBCol>
                 </MDBRow>
               </MDBCol>
@@ -169,8 +177,8 @@ export default class Contenedor extends Component {
             <MDBRow>
               <MDBCol className="mt-4">
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de ída</strong> <MDBIcon size="lg" className="ml-3" far icon="calendar-alt" />
-                </MDBRow>
+                  <strong>Seleccione otra fecha de ída</strong> <Datepicker />
+                 </MDBRow>
                 <MDBRow className="h6"  id="secondary" between>
                   <MDBCol>
                     <MDBRow>
@@ -273,35 +281,37 @@ export default class Contenedor extends Component {
                     </MDBRow>
                   </MDBCol>
                   <MDBCol md="5">
-                    <MDBRow>
-                      <MDBCol id="cajasClases" className="border-left border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                          Económica
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol id="cajasClases" className="border-left border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                            Ejecutiva
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol id="cajasClases" className="border-left border-white">
-                        <input type="radio" /> Clase: <br />
-                        <MDBRow center>
-                          Primera Clase
-                        </MDBRow>
-                        <MDBRow center className="mt-3">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
+                    <form>
+                      <MDBRow>
+                        <MDBCol id="cajasClases" className="border-left border-white">
+                          <input type="radio" /> Clase: <br />
+                          <MDBRow center>
+                            Económica
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol id="cajasClases" className="border-left border-white">
+                          <input type="radio" /> Clase: <br />
+                          <MDBRow center>
+                              Ejecutiva
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol id="cajasClases" className="border-left border-white">
+                          <input type="radio" /> Clase: <br />
+                          <MDBRow center>
+                            Primera Clase
+                          </MDBRow>
+                          <MDBRow center className="mt-3">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </form>
                   </MDBCol>
                 </MDBRow>
               </MDBCol>
@@ -324,12 +334,8 @@ export default class Contenedor extends Component {
                 <MDBRow className="mt-3">
                   <MDBCol>
                     <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
-                      <MDBCol md="11">
-                        <strong className="ml-4 text-left h5 white-text">IDA</strong>
-                      </MDBCol>
-                      <MDBCol md="1">
-                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                      </MDBCol>
+                      <strong className="ml-4 text-left h5 white-text">IDA</strong>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
                     <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
                       <MDBRow id="accent" between>
@@ -340,12 +346,8 @@ export default class Contenedor extends Component {
                 <MDBRow>
                   <MDBCol>
                     <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
-                      <MDBCol md="11">
-                        <strong className="ml-4 text-left h5 white-text">VUELTA</strong>
-                      </MDBCol>
-                      <MDBCol md="1">
-                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                      </MDBCol>
+                      <strong className="ml-4 text-left h5 white-text">VUELTA</strong>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
                     <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
                       <MDBRow id="accent" between>
@@ -356,12 +358,8 @@ export default class Contenedor extends Component {
                 <MDBRow>
                   <MDBCol>
                     <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
-                      <MDBCol md="2">
-                        <strong className="text-left h5 white-text">Detalles</strong>
-                      </MDBCol>
-                      <MDBCol md="1">
-                        <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                      </MDBCol>
+                      <strong className="ml-4 text-left h5 white-text">Detalles</strong>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
                     <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
                       <MDBRow id="accent" between>
