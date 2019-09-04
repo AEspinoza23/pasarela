@@ -3,10 +3,8 @@ import {MDBRow, MDBCol, MDBNavbar, } from 'mdbreact'
 import LogoConviasa from "./img/logo.svg"
 import BanderaV from "./img/venezuela.png"
 import { HideAt } from 'react-with-breakpoints';
+import { Progress } from 'reactstrap';
 
-// Import Material-UI
-
-//Fin import Material-UI
 
 
 class index extends Component {
@@ -18,8 +16,12 @@ class index extends Component {
             <img src={LogoConviasa} alt="logo" />
           </MDBCol>
           <MDBCol md="7">
-          <HideAt breakpoint="mediumAndBelow">
-          
+          <HideAt breakpoint="largeAndBelow">
+            <Progress multi>
+              <Progress bar value="15">Vuelos</Progress>
+              <Progress bar color="success" value="30">Pasajeros y Pago</Progress>
+              <Progress bar color="info" value="25">Final</Progress>
+            </Progress>
           </HideAt>
           </MDBCol>
           <HideAt breakpoint="mediumAndBelow">
