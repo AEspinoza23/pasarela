@@ -50,19 +50,15 @@ class PasajerosPago extends Component {
     return (
       <div>
         <MDBRow around className="mt-5">
-          <MDBCol sm="8">
+          <MDBCol sm="8" md="12" lg="8">
             <MDBRow>
               <MDBCol className="colorAccent">
                 <MDBRow className="colorConviasa py-3 mb-1">
-                  <strong className="ml-4 white-text h5">Datos de Pasajero</strong> 
+                  <strong className="white-text h5">Datos de Pasajero</strong> 
                 </MDBRow>
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
-                  <MDBCol md="6">
-                    <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Adulto)</strong>
-                  </MDBCol>
-                  <MDBCol md="1">
-                    <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                  </MDBCol>
+                  <strong className="text-left h5 white-text">Introduzca los datos del pasajero (Adulto)</strong>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Adultos */}
                 <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseIDAdulto} className="mt-1 white">
@@ -134,7 +130,7 @@ class PasajerosPago extends Component {
                   </MDBRow>
                   <MDBRow className="mx-2">
                     <MDBCol md="6">
-                      <MDBInput type="date"/>
+                      <MDBInput type="date" label="Fecha de Nacimiento"/>
                     </MDBCol>
                     <MDBCol md="6">
                       <MDBInput type="email" label="E-mail" />
@@ -153,12 +149,8 @@ class PasajerosPago extends Component {
                 </MDBRow>
                 {/* fin Collapse Adulto */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
-                  <MDBCol md="6">
-                    <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Niño)</strong>
-                  </MDBCol>
-                  <MDBCol md="1">
-                    <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                  </MDBCol>
+                  <strong className="text-left h5 white-text">Introduzca los datos (Niño)</strong>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Nino */}
                 <MDBCollapse id="DatosNino" isOpen={this.state.collapseIDNino} className="mt-1 white">
@@ -196,10 +188,10 @@ class PasajerosPago extends Component {
                   </MDBRow>
                   <MDBRow className="mx-2">
                     <MDBCol md="6">
-                      <MDBInput type="date"/>
+                      <MDBInput type="date" label="Fecha de vencimiento de Pasaporte"/>
                     </MDBCol>
                     <MDBCol md="6">
-                      <MDBInput type="date"/>
+                      <MDBInput type="date" label="Fecha de Nacimiento"/>
                     </MDBCol>
                   </MDBRow>
                 </MDBCollapse>
@@ -207,12 +199,8 @@ class PasajerosPago extends Component {
                 </MDBRow>
                 {/* finCollapse Nino */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
-                  <MDBCol md="6">
-                    <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Infante)</strong>
-                  </MDBCol>
-                  <MDBCol md="1">
-                    <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-                  </MDBCol>
+                  <strong className="text-left h5 white-text">Introduzca los datos (Infante)</strong>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Infantes */}
                 <MDBCollapse id="DatosInfante" isOpen={this.state.collapseIDInfante} className="mt-1 white">
@@ -280,7 +268,7 @@ class PasajerosPago extends Component {
                     <input type="radio" className="mr-2 mt-1"/><img src={BancoTesoro} style={{width:"90px", height:"40px"}} alt=""/>
                   </MDBCol>
                   <MDBCol sm="12" lg="2" className="mt-3">
-                    <input type="radio" className="ml-3 mr-2 mt-1"/><img src={Bod} style={{width:"80px", height:"40px"}} className="mr-3" alt=""/>
+                    <input type="radio" className="mr-2 mt-1"/><img src={Bod} style={{width:"80px", height:"40px"}} className="mr-3" alt=""/>
                   </MDBCol>
                   <MDBCol sm="12" lg="3" className="mt-3">
                     <input type="radio" className="mr-2 mt-1"/><img src={Activo} style={{width:"180px", height:"40px"}} alt=""/>
@@ -416,7 +404,7 @@ class PasajerosPago extends Component {
           </MDBCol>
 
 
-          <MDBCol sm="4">
+          <MDBCol sm="4" md="12" lg="4">
             <MDBRow>
               <MDBCol>
                 <MDBBtn block color="orange">Salir</MDBBtn>
@@ -453,12 +441,8 @@ class PasajerosPago extends Component {
               </MDBCol>
             </MDBRow>
             <MDBRow id="primary" onClick={this.toggleCollapseTasasyRecargos("TasasyRecargos")} between>
-              <MDBCol md="5">
-                <strong className=" h5 white-text">Tasas y Recargos</strong>
-              </MDBCol>
-              <MDBCol md="1">
-                <MDBIcon icon="angle-down" size="2x" className="white-text"/>
-              </MDBCol>
+              <strong className="h5 left-text">Tasas y Recargos</strong>
+              <MDBIcon icon="angle-down" size="2x" className="white-text rigth-text"/>
             </MDBRow>
             <MDBCollapse id="TasasyRecargos" isOpen={this.state.collapseTasasyRecargos} className="white">
               <MDBRow id="primary">
