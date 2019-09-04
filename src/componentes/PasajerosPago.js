@@ -282,7 +282,7 @@ class PasajerosPago extends Component {
                     <MDBInput type="text" label="Apellido Titular" />
                   </MDBCol>
                   <MDBCol md="4">
-                    <MDBInput type="text" label=" Email del Titular" />
+                    <MDBInput type="text" label="Email del Titular" />
                   </MDBCol>
                 </MDBRow>
                 <MDBRow className="white">
