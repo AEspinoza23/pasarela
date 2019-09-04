@@ -57,7 +57,7 @@ class PasajerosPago extends Component {
                   <strong className="ml-4 white-text h5">Datos de Pasajero</strong> 
                 </MDBRow>
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
-                  <MDBCol md="6">
+                  <MDBCol md="10">
                     <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Adulto)</strong>
                   </MDBCol>
                   <MDBCol md="1">
@@ -153,7 +153,7 @@ class PasajerosPago extends Component {
                 </MDBRow>
                 {/* fin Collapse Adulto */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
-                  <MDBCol md="6">
+                  <MDBCol md="10">
                     <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Niño)</strong>
                   </MDBCol>
                   <MDBCol md="1">
@@ -207,7 +207,7 @@ class PasajerosPago extends Component {
                 </MDBRow>
                 {/* finCollapse Nino */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
-                  <MDBCol md="6">
+                  <MDBCol md="10">
                     <strong className="ml-4 text-left h5 white-text">Introduzca los datos del pasajero (Infante)</strong>
                   </MDBCol>
                   <MDBCol md="1">

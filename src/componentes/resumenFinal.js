@@ -197,7 +197,7 @@ export default class resumenFinal extends Component {
           </MDBCol>
         </MDBRow>
         <MDBRow center>
-          <MDBCol className="colorConviasa" size="9">
+          <MDBCol className="colorConviasa" sm="12" md="9">
             <MDBBtn color="orange" block>
               Finalizar
             </MDBBtn>
