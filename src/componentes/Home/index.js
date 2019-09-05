@@ -176,28 +176,28 @@ class index extends Component {
                 </MDBRow>
               </MDBCol>
             </MDBRow>
-            <MDBRow>
-              <MDBCol className="mt-4">
+            <MDBRow className="h6">
+              <MDBCol>
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de ída</strong> <Datepicker />
-                 </MDBRow>
-                <MDBRow className="h6"  id="secondary" between>
+                  <strong>Seleccione otra fecha de vuelta</strong><Datepicker/>
+                </MDBRow>
+                <MDBRow id="secondary" between>
                   <MDBCol>
                     <MDBRow>
                       <MDBCol size="4">
                         <MDBRow>
-                        <strong>Viernes</strong>
+                          <strong>Jueves</strong>
                         </MDBRow>
                         <MDBRow className="my-2 h3">
                           <strong>30</strong>
                         </MDBRow>
                         <MDBRow>
-                          <strong>Diciembre</strong>
+                          <strong>Noviembre</strong>
                         </MDBRow>
                       </MDBCol>
                       <MDBCol>
                         <MDBRow>
-                          <strong> <MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
+                          <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
                         </MDBRow>
                         <MDBRow className="my-3">
                           <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
@@ -205,11 +205,11 @@ class index extends Component {
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
-                  <MDBCol sm="12" md="5" className="pt-3">
+                  <MDBCol  sm="12" md="5" className="pt-3">
                     <MDBRow>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Económica</strong>
+                          <strong className="h6">Económica</strong>
                         </MDBRow>
                         <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -217,7 +217,7 @@ class index extends Component {
                       </MDBCol>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong>Ejecutiva</strong>
+                          <strong className="h6">Ejecutiva</strong>
                         </MDBRow>
                         <MDBRow center className="mt-4">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -225,24 +225,24 @@ class index extends Component {
                       </MDBCol>
                       <MDBCol className="border-left border-white">
                         <MDBRow center>
-                          <strong >Primera</strong>
+                          <strong className="h6">Primera</strong>
                         </MDBRow>
                         <MDBRow center>
                           <strong>Clase</strong>
                         </MDBRow>
-                        <MDBRow center className="my-2">
+                        <MDBRow center className="mt-1">
                           1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                         </MDBRow>
                       </MDBCol>
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
-                <MDBRow className="h6" id="accent" between>
-                  <MDBCol xs="12" sm="6" md="4">
+                <MDBRow id="accent" between>
+                  <MDBCol className="h6" sm="12" md="4">
                     <MDBRow around>
                       <MDBCol>
-                        <MDBRow start>
-                          <MDBCol  size="6">
+                        <MDBRow>
+                          <MDBCol>
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -250,7 +250,7 @@ class index extends Component {
                               <strong>12:30</strong>
                             </MDBRow>
                           </MDBCol>
-                          <MDBCol size="6">
+                          <MDBCol>
                             <MDBRow>
                               <strong>Ciudad</strong>
                             </MDBRow>
@@ -286,7 +286,7 @@ class index extends Component {
                     <form>
                       <MDBRow>
                         <MDBCol id="cajasClases" className="border-left border-white">
-                          <input type="radio" /> Clase: <br />
+                          <input type="radio" name="cajasIda" value="O" /> Clase: <br />
                           <MDBRow center>
                             Económica
                           </MDBRow>
@@ -295,7 +295,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCol>
                         <MDBCol id="cajasClases" className="border-left border-white">
-                          <input type="radio" /> Clase: <br />
+                          <input type="radio" name="cajasIda" value="P" /> Clase: <br />
                           <MDBRow center>
                               Ejecutiva
                           </MDBRow>
@@ -303,8 +303,8 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-left border-white">
-                          <input type="radio" /> Clase: <br />
+                        <MDBCol id="cajasClases" className="border-right border-white">
+                          <input type="radio" name="cajasIda" value="W" /> Clase: <br />
                           <MDBRow center>
                             Primera Clase
                           </MDBRow>
@@ -312,7 +312,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                      </MDBRow>
+                      </MDBRow>  
                     </form>
                   </MDBCol>
                 </MDBRow>

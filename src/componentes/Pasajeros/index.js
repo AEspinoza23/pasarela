@@ -11,9 +11,6 @@ import {
 } from "mdbreact"
 import "../../index.css"
 import { Link } from 'react-router-dom'
-import BancoTesoro from "../Global/img/tesoro.png"
-import Bod from "../Global/img/bod.png"
-import Activo from "../Global/img/activo.png" 
 
 class index extends Component {
 
@@ -255,151 +252,20 @@ class index extends Component {
               <MDBCol className="colorAccent">
                 <MDBRow className="colorConviasa py-4">
                   <MDBCol>
-                    <MDBRow center >
-                      <input type="radio" className="mr-2 mt-1 white-text"/><p>Tarjeta de Débito</p>
-                      <input type="radio" className="ml-3 mr-2 mt-1"/><p className="mr-4">Transferencia</p>
-                      <input type="radio" className="mr-2 mt-1"/><p>Petro Pago</p>
-                    </MDBRow>
                     <MDBRow >
-                      <strong className="h5 white-text ml-3">Seleccione Banco</strong>    
+                      <strong className="h5 white-text ml-3">Seleccione su metodo de pago</strong>    
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
-                <MDBRow  start className="py-3 white">
-                  <MDBCol sm="12" lg="2" className="mt-3">
-                    <input type="radio" className="mr-2 mt-1"/><img src={BancoTesoro} style={{width:"90px", height:"40px"}} alt=""/>
-                  </MDBCol>
-                  <MDBCol sm="12" lg="2" className="mt-3">
-                    <input type="radio" className="mr-2 mt-1"/><img src={Bod} style={{width:"80px", height:"40px"}} className="mr-3" alt=""/>
-                  </MDBCol>
-                  <MDBCol sm="12" lg="3" className="mt-3">
-                    <input type="radio" className="mr-2 mt-1"/><img src={Activo} style={{width:"180px", height:"40px"}} alt=""/>
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="4">
-                    <MDBInput type="text" label="Nombre Titular" />
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <MDBInput type="text" label="Apellido Titular" />
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <MDBInput type="text" label="Email del Titular" />
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="4">
-                    <MDBInput type="number" label="Cédula"/>
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <MDBInput type="number" label="N° de Teléfono"/>
-                  </MDBCol>
+                <MDBRow center>
+                  <input type="radio" className="mr-2 mt-1 white-text"/><p>Tarjeta de Débito</p>
+                  <input type="radio" className="ml-3 mr-2 mt-1"/><p className="mr-4">Transferencia</p>
+                  <input type="radio" className="mr-2 mt-1"/><p>Petro Pago</p>
+                  <input type="radio" className="mt-1 ml-2" /> <p>Visa y mastercard</p>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
             {/* fin formulario Pago Debito */}
-            {/* Formulario pago Tarjeta de Credito */}
-            <MDBRow className="mt-4">
-              <MDBCol className="colorAccent">
-                <MDBRow className="colorConviasa py-4">
-                  <MDBCol>
-                    <MDBRow center >
-                      <input type="radio" className="mr-2 mt-1 white-text"/><p>Tarjeta de Crédito</p>
-                      <input type="radio" className="mr-2 mt-1"/><p>Petro Pago</p>
-                    </MDBRow>
-                    <MDBRow >
-                      <strong className="h5 white-text ml-3">Introduzca los datos de su Tarjeta</strong>    
-                    </MDBRow>
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow  start className="py-2 white">
-                  <MDBIcon fab className="ml-2 grey-text" icon="cc-visa" size="3x"/>
-                  <MDBIcon fab className="ml-2 grey-text" icon="cc-mastercard" size="3x"/>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="6">
-                    <MDBInput type="text" label="Nombre Titular de la Tarjeta" />
-                  </MDBCol>
-                  <MDBCol md="6">
-                    <MDBInput type="email" label="Email del Titular" />
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="4">
-                    <MDBInput type="number" label="Cédula"/>
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <MDBInput type="number" label="N° de Tarjeta"/>
-                  </MDBCol>
-                  <MDBCol md="4">
-                    <MDBInput type="number" label="Cód.Seguridad"/>
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="6">
-                    <MDBInputGroup
-                      containerClassName="mt-4"
-                      inputs={
-                        <select className="browser-default custom-select">
-                          <option value="0">Mes de Vencimiento</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      }
-                    />
-                  </MDBCol>
-                  <MDBCol md="6">
-                    <MDBInputGroup
-                      containerClassName="mt-4"
-                      inputs={
-                        <select className="browser-default custom-select">
-                          <option value="0">Año de Vencimiento</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      }
-                    />
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="white">
-                  <MDBCol md="3">
-                    <MDBInputGroup
-                      containerClassName="mt-4"
-                      inputs={
-                        <select className="browser-default custom-select">
-                          <option value="0">Mes de Vencimiento</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      }
-                    />
-                  </MDBCol>
-                  <MDBCol md="3">
-                    <MDBInputGroup
-                      containerClassName="mt-4"
-                      inputs={
-                        <select className="browser-default custom-select">
-                          <option value="0">Mes de Vencimiento</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      }
-                    />
-                  </MDBCol>
-                  <MDBCol md="3">
-                    <MDBInput type="number" label="Código de área"/>
-                  </MDBCol>
-                  <MDBCol md="3">
-                    <MDBInput type="number" label="N° de Teléfono"/>
-                  </MDBCol>
-                </MDBRow>
-              </MDBCol>
-            </MDBRow>
-            {/* Fin Formulario pago Tarjeta de Credito */}
             <Link to="/Resumen">
               <MDBRow center>
                 <MDBBtn block color="grey">Continuar</MDBBtn>
