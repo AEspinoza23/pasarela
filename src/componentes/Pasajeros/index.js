@@ -11,6 +11,7 @@ import {
 } from "mdbreact"
 import "../../index.css"
 import { Link } from 'react-router-dom'
+import { SelectorPagos } from './FormularioPagos'
 
 class index extends Component {
 
@@ -257,12 +258,7 @@ class index extends Component {
                     </MDBRow>
                   </MDBCol>
                 </MDBRow>
-                <MDBRow center>
-                  <input type="radio" className="mr-2 mt-1 white-text"/><p>Tarjeta de Débito</p>
-                  <input type="radio" className="ml-3 mr-2 mt-1"/><p className="mr-4">Transferencia</p>
-                  <input type="radio" className="mr-2 mt-1"/><p>Petro Pago</p>
-                  <input type="radio" className="mt-1 ml-2" /> <p>Visa y mastercard</p>
-                </MDBRow>
+                <SelectorPagos />
               </MDBCol>
             </MDBRow>
             {/* fin formulario Pago Debito */}
@@ -272,8 +268,7 @@ class index extends Component {
               </MDBRow>
             </Link>
           </MDBCol>
-
-
+          
           <MDBCol sm="4" md="12" lg="4">
             <MDBRow>
               <MDBCol>
