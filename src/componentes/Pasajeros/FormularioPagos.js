@@ -169,7 +169,7 @@ export class SelectorPagos extends Component {
     return (
       <div>
         <HideAt breakpoint="mediumAndBelow">
-          <RadioGroup onChange={ this.cambiarMetodo } horizontal>
+          <RadioGroup onChange={ this.cambiarMetodo } horizontal className="my-2">
             <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="tdd">
               PagaloFacil Debito
             </ReversedRadioButton>

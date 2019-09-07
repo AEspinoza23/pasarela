@@ -19,9 +19,9 @@ class index extends Component {
     collapseIDAdulto: true,
     collapseIDNino: true,
     collapseIDInfante: true,
-    collapseTasasyRecargos: true
+    collapseTasasyRecargos: true,    
   }
-  
+
   toggleCollapseAdulto = collapseIDAdulto => () => {
     this.setState(prevState => ({
       collapseIDAdulto: prevState.collapseIDAdulto !== collapseIDAdulto ? collapseIDAdulto : ""
@@ -46,6 +46,8 @@ class index extends Component {
     }));
   }
 
+  
+
   render() {
     return (
       <MDBContainer fluid className="marginTop">
@@ -54,15 +56,15 @@ class index extends Component {
             <MDBRow>
               <MDBCol className="colorAccent">
                 <MDBRow className="colorConviasa py-3 mb-1">
-                  <strong className="white-text h5">Datos de Pasajero</strong> 
+                  <strong className="white-text h5 ml-3">Datos de Pasajero</strong> 
                 </MDBRow>
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
-                  <strong className="text-left h5 white-text">Introduzca los datos del pasajero (Adulto)</strong>
+                  <strong className="text-left h5 white-text ml-3">Introduzca los datos (Adulto)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Adultos */}
                 <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseIDAdulto} className="mt-1 white">
-                  <MDBRow className="colorConviasa z-depth-1 mx-1">
+                  <MDBRow className="colorConviasa z-depth-1 mx-1 py-2">
                     <p className="ml-3 h5 white-text">Datos Adulto 1</p>
                   </MDBRow>
                   <MDBRow className="mt-3 mx-2">
@@ -149,13 +151,13 @@ class index extends Component {
                 </MDBRow>
                 {/* fin Collapse Adulto */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
-                  <strong className="text-left h5 white-text">Introduzca los datos (Niño)</strong>
+                  <strong className="text-left h5 white-text ml-3">Introduzca los datos (Niño)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Nino */}
                 <MDBCollapse id="DatosNino" isOpen={this.state.collapseIDNino} className="mt-1 white">
                   <MDBRow className="colorConviasa z-depth-1 mx-1">
-                    <p className="ml-3 h5 white-text">Datos niño</p>
+                    <p className="ml-3 h5 white-text py-2">Datos niño</p>
                   </MDBRow>
                   <MDBRow className="mt-3 mx-2">
                     <MDBCol md="4">
@@ -199,13 +201,13 @@ class index extends Component {
                 </MDBRow>
                 {/* finCollapse Nino */}
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
-                  <strong className="text-left h5 white-text">Introduzca los datos (Infante)</strong>
+                  <strong className="text-left h5 white-text ml-3">Introduzca los datos (Infante)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
                 {/* Collapse Infantes */}
                 <MDBCollapse id="DatosInfante" isOpen={this.state.collapseIDInfante} className="mt-1 white">
                   <MDBRow className="colorConviasa z-depth-1 mx-1">
-                    <p className="ml-3 h5 white-text">Datos Infantes</p>
+                    <p className="ml-3 h5 white-text py-2">Datos Infantes</p>
                   </MDBRow>
                   <MDBRow className="mt-3 mx-2">
                     <MDBCol md="4">
@@ -264,7 +266,7 @@ class index extends Component {
             {/* fin formulario Pago Debito */}
             <Link to="/Resumen">
               <MDBRow center>
-                <MDBBtn block color="grey">Continuar</MDBBtn>
+                <MDBBtn block color="grey" className="mb-1">Continuar</MDBBtn>
               </MDBRow>
             </Link>
           </MDBCol>

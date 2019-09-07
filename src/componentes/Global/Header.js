@@ -25,7 +25,7 @@ class index extends Component {
             </Progress>
           </HideAt>
           </MDBCol>
-          <HideAt breakpoint="mediumAndBelow">
+          <HideAt breakpoint="largeAndBelow">
             <MDBCol md="2">
               <MDBRow>
                 <MDBCol size="1">
