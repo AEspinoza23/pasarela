@@ -13,18 +13,18 @@ class index extends Component {
     return (
       <div>
         <MDBNavbar fixed="top " className="colorConviasa">
-          <MDBCol md="2" className="text-center">
+          <MDBCol md="12" lg="2" className="text-center">
             <img src={LogoConviasa} alt="logo" />
           </MDBCol>
-          <MDBCol md="7">
           <HideAt breakpoint="largeAndBelow">
-            <Progress multi>
-              <Progress bar value="30">Vuelos</Progress>
-              <Progress bar value="0">Pasajeros y Pago</Progress>
-              <Progress bar value="0">Final</Progress>
-            </Progress>
+            <MDBCol md="6" className="ml-5">
+              <Progress multi>
+                <Progress bar value="30">Vuelos</Progress>
+                <Progress bar value="0">Pasajeros y Pago</Progress>
+                <Progress bar value="0">Final</Progress>
+              </Progress>
+            </MDBCol>
           </HideAt>
-          </MDBCol>
           <HideAt breakpoint="largeAndBelow">
             <MDBCol md="2">
               <MDBRow>

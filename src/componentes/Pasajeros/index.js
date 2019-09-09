@@ -51,7 +51,7 @@ class index extends Component {
   render() {
     return (
       <MDBContainer fluid className="marginTop">
-        <MDBRow around className="mt-5">
+        <MDBRow around className="mt-5 caja">
           <MDBCol sm="8" md="12" lg="8">
             <MDBRow>
               <MDBCol className="colorAccent">

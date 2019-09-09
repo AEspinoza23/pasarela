@@ -14,7 +14,7 @@ import AppRoutes from './Routes'
 
 const breakpoints = {
   small: 468,
-  medium: 768,
+  medium: 800,
   large: 1024,
   xlarge: Infinity,
 }

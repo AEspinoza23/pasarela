@@ -84,13 +84,13 @@ class index extends Component {
   render() {
     return (
       <MDBContainer className="marginTop" fluid>
-        <MDBCol className="colorConviasa mb-1">
-          <ShowAt breakpoint="mediumAndBelow">
-              <MDBBtn size="lg" block color="orange">Salir</MDBBtn>
-          </ShowAt>
-        </MDBCol>
+        <ShowAt breakpoint="mediumAndBelow">
+          <MDBRow center>
+            <MDBBtn className="mb-1 caja" size="lg" block color="orange">Salir</MDBBtn>
+          </MDBRow>
+        </ShowAt>
         <MDBRow around>
-          <MDBCol xs="12" lg="8">
+          <MDBCol sm="12" lg="8">
             <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
@@ -111,125 +111,147 @@ class index extends Component {
                         </MDBRow>
                       </MDBCol>
                       <MDBCol>
-                        <MDBRow>
-                          <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
-                        </MDBRow>
-                        <MDBRow className="my-3">
-                          <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
-                        </MDBRow>
+                        <HideAt breakpoint="mediumAndBelow">
+                          <MDBRow>
+                            <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
+                          </MDBRow>
+                          <MDBRow className="my-3">
+                            <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
+                          </MDBRow>
+                        </HideAt>
                       </MDBCol>
+                      <ShowAt breakpoint="mediumAndBelow">
+                        <MDBCol className="pt-3 border-left border-white">
+                          <strong>
+                            <MDBIcon size="lg" icon="plane-departure" /><br/>
+                            <div className="my-1">13:30<br/></div>
+                            CSS
+                          </strong>
+                        </MDBCol>
+                        <MDBCol className="pt-3">
+                          <strong>
+                            <MDBIcon size="lg" icon="plane-arrival" /><br/>
+                            <div className="my-1">13:30<br/></div>
+                            PMV
+                          </strong>
+                        </MDBCol>
+                      </ShowAt>
                     </MDBRow>
                   </MDBCol>
-                  <MDBCol  sm="12" md="5" className="pt-3">
-                    <MDBRow>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Económica</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-4">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Ejecutiva</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-4">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Primera</strong>
-                        </MDBRow>
-                        <MDBRow center>
-                          <strong>Clase</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-1">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBCol>
+                  <ShowAt breakpoint="largeAndAbove">
+                    <MDBCol  sm="12" md="5" className="pt-3">
+                      <MDBRow>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Económica</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-4">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Ejecutiva</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-4">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Primera</strong>
+                          </MDBRow>
+                          <MDBRow center>
+                            <strong>Clase</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-1">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBCol>
+                  </ShowAt>
                 </MDBRow>
                 <MDBRow id="accent" between>
-                  <MDBCol className="h6" sm="12" md="4">
-                    <MDBRow around>
-                      <MDBCol>
-                        <MDBRow>
-                          <MDBCol>
-                            <MDBRow>
-                              <strong>Ciudad</strong>
+                  <HideAt breakpoint="mediumAndBelow">
+                    <MDBCol className="h6" sm="12" md="4">
+                      <MDBRow around>
+                        <MDBCol>
+                          <MDBRow>
+                            <MDBCol>
+                              <MDBRow>
+                                <strong>Ciudad</strong>
+                              </MDBRow>
+                              <MDBRow>
+                                <strong>12:30</strong>
+                              </MDBRow>
+                            </MDBCol>
+                            <MDBCol>
+                              <MDBRow>
+                                <strong>Ciudad</strong>
+                              </MDBRow>
+                              <MDBRow>
+                                <strong>12:30</strong>
+                              </MDBRow>
+                            </MDBCol>
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol>
+                          <MDBRow>
+                            <strong>Vuelo:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Duración:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Operado:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Equipo:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Comida:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Num. vuelo:</strong>
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBCol>
+                    <MDBCol md="5">
+                      <form className="formulario">
+                        <MDBRow className="radio">
+                          <MDBCol id="cajasClases" className="z-depth-1">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="economica" />
+                              <label for="economica">Clase: W </label>
                             </MDBRow>
-                            <MDBRow>
-                              <strong>12:30</strong>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                             </MDBRow>
                           </MDBCol>
-                          <MDBCol>
-                            <MDBRow>
-                              <strong>Ciudad</strong>
+                          <MDBCol id="cajasClases" className="mx-1 z-depth-1">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="ejecutiva" />
+                              <label for="ejecutiva">Clase: W </label>
                             </MDBRow>
-                            <MDBRow>
-                              <strong>12:30</strong>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                             </MDBRow>
                           </MDBCol>
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol>
-                        <MDBRow>
-                          <strong>Vuelo:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Duración:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Operado:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Equipo:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Comida:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Num. vuelo:</strong>
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBCol>
-                  <MDBCol md="5">
-                    <form>
-                      <MDBRow>
-                        <MDBCol id="cajasClases" className="z-depth-1">
-                          <input type="radio" name="cajasIda" value="O" /> Clase: <br />
-                          <MDBRow center>
-                            Económica
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
-                          <input type="radio" name="cajasIda" value="P" /> Clase: <br />
-                          <MDBRow center>
-                              Ejecutiva
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                        <MDBCol id="cajasClases" className="z-depth-1">
-                          <input type="radio" name="cajasIda" value="W" /> Clase: <br />
-                          <MDBRow center>
-                            Primera Clase
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                      </MDBRow>  
-                    </form>
-                  </MDBCol>
+                          <MDBCol id="cajasClases" className="z-depth-2">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="primeraClase" />
+                              <label for="primeraClase">Clase: W </label>
+                            </MDBRow>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>  
+                      </form>
+                    </MDBCol>
+                  </HideAt>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
@@ -253,125 +275,147 @@ class index extends Component {
                         </MDBRow>
                       </MDBCol>
                       <MDBCol>
-                        <MDBRow>
-                          <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
-                        </MDBRow>
-                        <MDBRow className="my-3">
-                          <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
-                        </MDBRow>
+                        <HideAt breakpoint="mediumAndBelow">
+                          <MDBRow>
+                            <strong><MDBIcon icon="plane-departure" /> Caracas, Venezuela</strong>
+                          </MDBRow>
+                          <MDBRow className="my-3">
+                            <strong><MDBIcon icon="plane-arrival" /> Porlamar, Venezuela</strong>
+                          </MDBRow>
+                        </HideAt>
                       </MDBCol>
+                      <ShowAt breakpoint="mediumAndBelow">
+                        <MDBCol className="pt-3 border-left border-white">
+                          <strong>
+                            <MDBIcon size="lg" icon="plane-departure" /><br/>
+                            <div className="my-1">13:30<br/></div>
+                            CSS
+                          </strong>
+                        </MDBCol>
+                        <MDBCol className="pt-3">
+                          <strong>
+                            <MDBIcon size="lg" icon="plane-arrival" /><br/>
+                            <div className="my-1">13:30<br/></div>
+                            PMV
+                          </strong>
+                        </MDBCol>
+                      </ShowAt>
                     </MDBRow>
                   </MDBCol>
-                  <MDBCol  sm="12" md="5" className="pt-3">
-                    <MDBRow>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Económica</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-4">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Ejecutiva</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-4">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol className="border-left border-white">
-                        <MDBRow center>
-                          <strong className="h6">Primera</strong>
-                        </MDBRow>
-                        <MDBRow center>
-                          <strong>Clase</strong>
-                        </MDBRow>
-                        <MDBRow center className="mt-1">
-                          1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBCol>
+                  <ShowAt breakpoint="largeAndAbove">
+                    <MDBCol  sm="12" md="5" className="pt-3">
+                      <MDBRow>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Económica</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-4">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Ejecutiva</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-4">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol className="border-left border-white">
+                          <MDBRow center>
+                            <strong className="h6">Primera</strong>
+                          </MDBRow>
+                          <MDBRow center>
+                            <strong>Clase</strong>
+                          </MDBRow>
+                          <MDBRow center className="mt-1">
+                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBCol>
+                  </ShowAt>
                 </MDBRow>
                 <MDBRow id="accent" between>
-                  <MDBCol className="h6" sm="12" md="4">
-                    <MDBRow around>
-                      <MDBCol>
-                        <MDBRow>
-                          <MDBCol>
-                            <MDBRow>
-                              <strong>Ciudad</strong>
+                  <ShowAt breakpoint="largeAndAbove">
+                    <MDBCol className="h6" sm="12" md="4">
+                      <MDBRow around>
+                        <MDBCol>
+                          <MDBRow>
+                            <MDBCol>
+                              <MDBRow>
+                                <strong>Ciudad</strong>
+                              </MDBRow>
+                              <MDBRow>
+                                <strong>12:30</strong>
+                              </MDBRow>
+                            </MDBCol>
+                            <MDBCol>
+                              <MDBRow>
+                                <strong>Ciudad</strong>
+                              </MDBRow>
+                              <MDBRow>
+                                <strong>12:30</strong>
+                              </MDBRow>
+                            </MDBCol>
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol>
+                          <MDBRow>
+                            <strong>Vuelo:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Duración:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Operado:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Equipo:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Comida:</strong>
+                          </MDBRow>
+                          <MDBRow>
+                            <strong>Num. vuelo:</strong>
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBCol>
+                    <MDBCol md="5">
+                      <form className="formulario">
+                        <MDBRow className="radio">
+                          <MDBCol id="cajasClases" className="z-depth-1">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="economicaVuelta" />
+                              <label for="economicaVuelta">Clase: W </label>
                             </MDBRow>
-                            <MDBRow>
-                              <strong>12:30</strong>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                             </MDBRow>
                           </MDBCol>
-                          <MDBCol>
-                            <MDBRow>
-                              <strong>Ciudad</strong>
+                          <MDBCol id="cajasClases" className="mx-1 z-depth-1">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="ejecutivaVuelta" />
+                              <label for="ejecutivaVuelta">Clase: W </label>
                             </MDBRow>
-                            <MDBRow>
-                              <strong>12:30</strong>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                             </MDBRow>
                           </MDBCol>
-                        </MDBRow>
-                      </MDBCol>
-                      <MDBCol>
-                        <MDBRow>
-                          <strong>Vuelo:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Duración:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Operado:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Equipo:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Comida:</strong>
-                        </MDBRow>
-                        <MDBRow>
-                          <strong>Num. vuelo:</strong>
-                        </MDBRow>
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBCol>
-                  <MDBCol md="5">
-                    <form>
-                      <MDBRow>
-                        <MDBCol id="cajasClases" className="z-depth-1">
-                          <input type="radio" name="cajasIda" value="O" /> Clase: <br />
-                          <MDBRow center>
-                            Económica
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
-                          <input type="radio" name="cajasIda" value="P" /> Clase: <br />
-                          <MDBRow center>
-                              Ejecutiva
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                        <MDBCol id="cajasClases" className="z-depth-2">
-                          <input type="radio" name="cajasIda" value="W" /> Clase: <br />
-                          <MDBRow center>
-                            Primera Clase
-                          </MDBRow>
-                          <MDBRow center className="mt-3">
-                            1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
-                          </MDBRow>
-                        </MDBCol>
-                      </MDBRow>  
-                    </form>
-                  </MDBCol>
+                          <MDBCol id="cajasClases" className="z-depth-2">
+                            <MDBRow center>
+                              <input type="radio" name="cajasIda" value="W" id="primeraClaseVuelta" />
+                              <label for="primeraClaseVuelta">Clase: W </label>
+                            </MDBRow>
+                            <MDBRow center className="mt-3">
+                              1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>  
+                      </form>
+                    </MDBCol>
+                  </ShowAt>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
