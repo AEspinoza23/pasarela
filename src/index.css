@@ -19,8 +19,6 @@
   border-right: 3px solid #fff;
 }
 
-
-
 #primary {
   padding: 1rem;
   background-color: #EE7500;
@@ -55,8 +53,6 @@
 #cajasClases {
   padding: 1rem;
   background-color: #717171;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
   color: #fff;
   text-align: center;
   border-radius: 3px

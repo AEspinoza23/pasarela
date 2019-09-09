@@ -200,7 +200,7 @@ class index extends Component {
                   <MDBCol md="5">
                     <form>
                       <MDBRow>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="O" /> Clase: <br />
                           <MDBRow center>
                             Económica
@@ -209,7 +209,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
                           <input type="radio" name="cajasIda" value="P" /> Clase: <br />
                           <MDBRow center>
                               Ejecutiva
@@ -218,7 +218,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-right border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="W" /> Clase: <br />
                           <MDBRow center>
                             Primera Clase
@@ -342,7 +342,7 @@ class index extends Component {
                   <MDBCol md="5">
                     <form>
                       <MDBRow>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="O" /> Clase: <br />
                           <MDBRow center>
                             Económica
@@ -351,7 +351,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
                           <input type="radio" name="cajasIda" value="P" /> Clase: <br />
                           <MDBRow center>
                               Ejecutiva
@@ -360,7 +360,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-right border-white">
+                        <MDBCol id="cajasClases" className="z-depth-2">
                           <input type="radio" name="cajasIda" value="W" /> Clase: <br />
                           <MDBRow center>
                             Primera Clase

@@ -19,9 +19,9 @@ class index extends Component {
           <MDBCol md="7">
           <HideAt breakpoint="largeAndBelow">
             <Progress multi>
-              <Progress bar value="15">Vuelos</Progress>
-              <Progress bar color="success" value="30">Pasajeros y Pago</Progress>
-              <Progress bar color="info" value="25">Final</Progress>
+              <Progress bar value="30">Vuelos</Progress>
+              <Progress bar value="0">Pasajeros y Pago</Progress>
+              <Progress bar value="0">Final</Progress>
             </Progress>
           </HideAt>
           </MDBCol>
