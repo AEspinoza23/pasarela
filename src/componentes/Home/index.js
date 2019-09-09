@@ -12,15 +12,72 @@ import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
 import Datepicker from './Datepicker'
 
+// Axios para hacer los llamados a API's
+import axios from 'axios'
+//const API_URL = 'http://kiu.surnet.io:8080';  
+
 class index extends Component {
 
   state = {
-    collapseID: false
+    collapseIda: false,
+    collapseVuelta: false,
+    collapseDetalles: false,
+    users: []
+  }
+
+  componentDidMount() {
+
+    const url = `/Airavailrs`;
+
+    let datosVuelos = {
+      direct_flight: false,
+      go_info: {
+        origin: "CCS", 
+        destination: "PMV", 
+        date: "2019-09-11"
+      },
+      back_info: {
+        origin: "PMV", 
+        destination: "CCS", 
+        date: "2019-09-18"
+      },
+      max_stops: 0,
+      passangers_info: {
+        adt: 1,
+        cnn: 0, 
+        inf: 0
+      }
+    }
+
+    axios({
+      method: 'post',
+      url: url,
+      data: datosVuelos,
+      headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
+    }).then(response => response.data)
+    .then((data) => {
+      this.setState({users: data})
+      console.log(this.state.users)
+    })
+
   }
   
-  toggleCollapse = collapseID => () => {
+  toggleCollapseIda = collapseIda => () => {
     this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+      collapseIda: prevState.collapseIda !== collapseIda ? collapseIda : ""
+    }));
+    console.log(collapseIda)
+  }
+
+  toggleCollapseVuelta = collapseVuelta => () => {
+    this.setState(prevState => ({
+      collapseVuelta: prevState.collapseVuelta !== collapseVuelta ? collapseVuelta : ""
+    }));
+  }
+  
+  toggleCollapseDetalles= collapseDetalles => () => {
+    this.setState(prevState => ({
+      collapseDetalles: prevState.collapseDetalles !== collapseDetalles ? collapseDetalles : ""
     }));
   }
 
@@ -143,7 +200,7 @@ class index extends Component {
                   <MDBCol md="5">
                     <form>
                       <MDBRow>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="O" /> Clase: <br />
                           <MDBRow center>
                             Económica
@@ -152,7 +209,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
                           <input type="radio" name="cajasIda" value="P" /> Clase: <br />
                           <MDBRow center>
                               Ejecutiva
@@ -161,7 +218,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-right border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="W" /> Clase: <br />
                           <MDBRow center>
                             Primera Clase
@@ -285,7 +342,7 @@ class index extends Component {
                   <MDBCol md="5">
                     <form>
                       <MDBRow>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="z-depth-1">
                           <input type="radio" name="cajasIda" value="O" /> Clase: <br />
                           <MDBRow center>
                             Económica
@@ -294,7 +351,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-left border-white">
+                        <MDBCol id="cajasClases" className="mx-1 z-depth-1">
                           <input type="radio" name="cajasIda" value="P" /> Clase: <br />
                           <MDBRow center>
                               Ejecutiva
@@ -303,7 +360,7 @@ class index extends Component {
                             1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
                           </MDBRow>
                         </MDBCol>
-                        <MDBCol id="cajasClases" className="border-right border-white">
+                        <MDBCol id="cajasClases" className="z-depth-2">
                           <input type="radio" name="cajasIda" value="W" /> Clase: <br />
                           <MDBRow center>
                             Primera Clase
@@ -337,11 +394,12 @@ class index extends Component {
                 </Link>
                 <MDBRow className="mt-3">
                   <MDBCol>
-                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
-                      <strong className="ml-4 text-left h5 white-text">IDA</strong>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseIda("ida")} between>
+                      <MDBIcon icon="plane" size="2x" className="ml-3"/>
+                      <strong className="ml-4 text-left h5 white-text" >IDA</strong>
                       <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
-                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                    <MDBCollapse id="ida" isOpen={this.state.collapseIda} color="white">
                       <MDBRow id="accent" between>
                       </MDBRow>
                     </MDBCollapse>
@@ -349,11 +407,12 @@ class index extends Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBCol>
-                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseVuelta("vuelta")} between>
+                      <MDBIcon icon="plane" size="2x" className="ml-3"/>
                       <strong className="ml-4 text-left h5 white-text">VUELTA</strong>
                       <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
-                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                    <MDBCollapse id="vuelta" isOpen={this.state.collapseVuelta} color="white">
                       <MDBRow id="accent" between>
                       </MDBRow>
                     </MDBCollapse>
@@ -361,11 +420,11 @@ class index extends Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBCol>
-                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapse("DatosAdulto")} between>
+                    <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseDetalles("detalles")} between>
                       <strong className="ml-4 text-left h5 white-text">Detalles</strong>
                       <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
                     </MDBRow>
-                    <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseID} color="white">
+                    <MDBCollapse id="detalles" isOpen={this.state.collapseDetalles} color="white">
                       <MDBRow id="accent" between>
                       </MDBRow>
                     </MDBCollapse>
