@@ -6,25 +6,23 @@ import {
   MDBIcon,
   MDBInputGroup,
 } from "mdbreact"
-import { RadioGroup, ReversedRadioButton } from 'react-radio-buttons'
-import { ShowAt, HideAt } from 'react-with-breakpoints'
-
+import "../../index.css";
 
 function PagaloFacilDebito() {
   return <div>
-    <MDBRow className="colorConviasa mt-4 py-4">
+    <MDBRow className="colorConviasa caja py-4">
       <MDBCol>
         <MDBRow >
           <strong className="h5 white-text ml-3">Introduzca sus datos</strong>    
         </MDBRow>
       </MDBCol>
     </MDBRow>
-    <MDBRow className="white">
+    <MDBRow className="colorAccent caja">
       <MDBCol md="4">
         <MDBInput type="text" label="Cédula" />
       </MDBCol>
       <MDBCol md="4" className="mt-4">
-        <select class="browser-default custom-select">
+        <select className="browser-default custom-select">
           <option value="" disabled selected>Seleccione su banco</option>
           <option value="Tesoro">Banco del Tesoro</option>
         </select>
@@ -34,7 +32,7 @@ function PagaloFacilDebito() {
 }
 
 function PagaloFacilTrf(){
-  return <div>
+  return <div className="colorAccent caja">
     mensaje PagaloFacilTrf
   </div>
 }
@@ -42,8 +40,8 @@ function PagaloFacilTrf(){
 function TarjetaCredito(){
   return <div>
 
-    <MDBRow className="mt-4">
-      <MDBCol className="colorAccent">
+    <MDBRow>
+      <MDBCol className="colorAccent caja">
         <MDBRow className="colorConviasa py-4">
           <MDBCol>
             <MDBRow >
@@ -160,46 +158,36 @@ export class SelectorPagos extends Component {
     this.state = {TipoPago: ''};
   }
 
-  cambiarMetodo = value => {
-    console.log(value)
-    this.setState({TipoPago: value})
+  cambiarMetodo = changeEvent => {
+    this.setState({
+      TipoPago: changeEvent.target.value
+    })
+    console.log(this.state.TipoPago) 
   }
 
   render(){
     return (
       <div>
-        <HideAt breakpoint="mediumAndBelow">
-          <RadioGroup onChange={ this.cambiarMetodo } horizontal className="my-2">
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="tdd">
-              PagaloFacil Debito
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="trf">
-              PagaloFacil Transferencia
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="tdc">
-              Visa y mastercard
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171"n value="petro">
-              Petro
-            </ReversedRadioButton>
-          </RadioGroup>
-        </HideAt>
-        <ShowAt breakpoint="mediumAndBelow">
-          <RadioGroup onChange={ this.cambiarMetodo } className="mt-3">
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="tdd">
-              PagaloFacil Debito
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="trf">
-              PagaloFacil Transferencia
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171" value="tdc">
-              Visa y mastercard
-            </ReversedRadioButton>
-            <ReversedRadioButton pointColor='#EE7500'  rootColor="#717171"n value="petro">
-              Petro
-            </ReversedRadioButton>
-          </RadioGroup>
-        </ShowAt>
+        <form className="formulario">
+          <MDBRow center className="colorConviasaG caja radio">
+            <MDBCol className="my-2" sm="12" md="3">
+              <input onChange={this.cambiarMetodo} value="tdd" name="metodoPago" type="radio" id="pfdebito"></input>
+              <label htmlFor="pfdebito">PF Debito</label>
+            </MDBCol>
+            <MDBCol className="my-2" sm="12" md="3">
+              <input onChange={this.cambiarMetodo} value="trf" name="metodoPago" type="radio" id="pftrf"></input>
+              <label htmlFor="pftrf"> PF Transferencia</label>
+            </MDBCol>
+            <MDBCol className="my-2" sm="12" md="3">
+              <input onChange={this.cambiarMetodo} value="tdc" name="metodoPago" type="radio" id="credito"></input>
+              <label htmlFor="credito">Credito</label>
+            </MDBCol>
+            <MDBCol className="my-2" sm="12" md="3">
+              <input onChange={this.cambiarMetodo} value="petro" name="metodoPago" type="radio" id="petro"></input>
+              <label htmlFor="petro">Petro Pago</label>
+            </MDBCol>
+          </MDBRow>       
+        </form>
         <FormularioPagos metodoPago={this.state.TipoPago} />
       </div>
     )

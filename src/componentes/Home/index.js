@@ -21,7 +21,7 @@ class index extends Component {
     collapseIda: false,
     collapseVuelta: false,
     collapseDetalles: false,
-    users: []
+    vuelos: []
   }
 
   componentDidMount() {
@@ -33,12 +33,12 @@ class index extends Component {
       go_info: {
         origin: "CCS", 
         destination: "PMV", 
-        date: "2019-09-11"
+        date: "2019-11-11"
       },
       back_info: {
         origin: "PMV", 
         destination: "CCS", 
-        date: "2019-09-18"
+        date: "2019-11-12"
       },
       max_stops: 0,
       passangers_info: {
@@ -55,8 +55,8 @@ class index extends Component {
       headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
     }).then(response => response.data)
     .then((data) => {
-      this.setState({users: data})
-      console.log(this.state.users)
+      this.setState({vuelos: data})
+      console.log(this.state.vuelos)
     })
 
   }
@@ -65,7 +65,6 @@ class index extends Component {
     this.setState(prevState => ({
       collapseIda: prevState.collapseIda !== collapseIda ? collapseIda : ""
     }));
-    console.log(collapseIda)
   }
 
   toggleCollapseVuelta = collapseVuelta => () => {
@@ -223,7 +222,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="mr-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="economicaIda" />
-                              <label for="economicaIda">Clase: W </label>
+                              <label htmlFor="economicaIda">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -232,7 +231,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="economicaIdaSecundaria" />
-                              <label for="economicaIdaSecundaria">Clase: W </label>
+                              <label htmlFor="economicaIdaSecundaria">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -241,7 +240,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="mx-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="ejecutivaIda" />
-                              <label for="ejecutivaIda">Clase: W </label>
+                              <label htmlFor="ejecutivaIda">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -250,7 +249,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="primeraClaseIda" />
-                              <label for="primeraClaseIda">Clase: W </label>
+                              <label htmlFor="primeraClaseIda">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -396,7 +395,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="mr-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="economicaVuelta" />
-                              <label for="economicaVuelta">Clase: W </label>
+                              <label htmlFor="economicaVuelta">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -405,7 +404,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="economicaVueltaSecundaria" />
-                              <label for="economicaVueltaSecundaria">Clase: W </label>
+                              <label htmlFor="economicaVueltaSecundaria">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -414,7 +413,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="mx-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="ejecutivaVuelta" />
-                              <label for="ejecutivaVuelta">Clase: W </label>
+                              <label htmlFor="ejecutivaVuelta">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -423,7 +422,7 @@ class index extends Component {
                           <MDBCol id="cajasClases" className="z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="primeraClaseVuelta" />
-                              <label for="primeraClaseVuelta">Clase: W </label>
+                              <label htmlFor="primeraClaseVuelta">Clase: W </label>
                             </MDBRow>
                             <MDBRow center className="mt-3">
                               1 <MDBIcon className="mx-1" icon="briefcase" /> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -440,7 +439,7 @@ class index extends Component {
           <MDBCol className="h6" sm="12" md="12" lg="4">
             <HideAt breakpoint="mediumAndBelow">
               <MDBRow center className="caja colorConviasa">
-                <MDBBtn flat className="z-depth-1" size="lg"  block>Salir</MDBBtn>
+                <MDBBtn className="white-text" size="lg" color="orange" block>Salir</MDBBtn>
               </MDBRow>
             </HideAt>
             <MDBRow className="mt-1" id="primary">
