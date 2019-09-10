@@ -15,7 +15,7 @@ export default class Datepicker extends React.Component {
     });
   }
 
-  onChange = date => this.setState({ date })
+  onChange = date => this.setState({ date, modal: !this.state.modal })
  
   render() {
     return (
@@ -26,7 +26,7 @@ export default class Datepicker extends React.Component {
         <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="sm">
           <MDBRow center>
             <Calendar
-            onChange={this.toggle}
+            onChange={this.onChange}
             value={this.state.date}
             className="black-text"
             />
