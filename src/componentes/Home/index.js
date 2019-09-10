@@ -22,6 +22,14 @@ class index extends Component {
     collapseIda: false,
     collapseVuelta: false,
     collapseDetalles: false,
+    collapseEconomicaIda: false,
+    collapseEconomica2Ida: false,
+    collapseEjecutivaIda: false,
+    collapsePClaseIda: false,
+    collapseEconomicaVuelta: false,
+    collapseEconomica2Vuelta: false,
+    collapseEjecutivaVuelta: false,
+    collapsePClaseVuelta: false,
     users: []
   }
 
@@ -78,6 +86,54 @@ class index extends Component {
   toggleCollapseDetalles= collapseDetalles => () => {
     this.setState(prevState => ({
       collapseDetalles: prevState.collapseDetalles !== collapseDetalles ? collapseDetalles : ""
+    }));
+  }
+
+  toggleCollapseEconomicaIda = collapseEconomicaIda => () => {
+    this.setState(prevState => ({
+      collapseEconomicaIda: prevState.collapseEconomicaIda !== collapseEconomicaIda ? collapseEconomicaIda : ""
+    }));
+  }
+
+  toggleCollapseEconomica2Ida = collapseEconomica2Ida => () => {
+    this.setState(prevState => ({
+      collapseEconomica2Ida: prevState.collapseEconomica2Ida !== collapseEconomica2Ida ? collapseEconomica2Ida : ""
+    }));
+  }
+
+  toggleCollapseEjecutivaIda = collapseEjecutivaIda => () => {
+    this.setState(prevState => ({
+      collapseEjecutivaIda: prevState.collapseEjecutivaIda !== collapseEjecutivaIda ? collapseEjecutivaIda : ""
+    }));
+  }
+
+  toggleCollapsePClaseIda = collapsePClaseIda => () => {
+    this.setState(prevState => ({
+      collapsePClaseIda: prevState.collapsePClaseIda !== collapsePClaseIda ? collapsePClaseIda : ""
+    }));
+  }
+
+  toggleCollapseEconomicaVuelta = collapseEconomicaVuelta => () => {
+    this.setState(prevState => ({
+      collapseEconomicaVuelta: prevState.collapseEconomicaVuelta !== collapseEconomicaVuelta ? collapseEconomicaVuelta : ""
+    }));
+  }
+
+  toggleCollapseEconomica2Vuelta = collapseEconomica2Vuelta => () => {
+    this.setState(prevState => ({
+      collapseEconomica2Vuelta: prevState.collapseEconomica2Vuelta !== collapseEconomica2Vuelta ? collapseEconomica2Vuelta : ""
+    }));
+  }
+
+  toggleCollapseEjecutivaVuelta = collapseEjecutivaVuelta => () => {
+    this.setState(prevState => ({
+      collapseEjecutivaVuelta: prevState.collapseEjecutivaVuelta!== collapseEjecutivaVuelta ? collapseEjecutivaVuelta : ""
+    }));
+  }
+
+  toggleCollapsePClaseVuelta = collapsePClaseVuelta => () => {
+    this.setState(prevState => ({
+      collapsePClaseVuelta: prevState.collapsePClaseVuelta !== collapsePClaseVuelta ? collapsePClaseVuelta : ""
     }));
   }
 
@@ -252,6 +308,140 @@ class index extends Component {
                       </form>
                     </MDBCol>
                   </HideAt>
+                  <ShowAt breakpoint="mediumAndBelow">
+                    <MDBCol>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEconomicaIda("economicaIda")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="h5 white-text mx-3">ECONÓMICA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="h5 white-text">ECONÓMICA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="economicaIda" isOpen={this.state.collapseEconomicaIda}>
+                        <MDBRow className="py-3 white" between >
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEconomica2Ida("economica2Ida")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="h5 white-text mx-3">ECONÓMICA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="h5 white-text">ECONÓMICA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="economica2Ida" isOpen={this.state.collapseEconomica2Ida} color="white">
+                        <MDBRow  className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1<MDBIcon className="mx-1" icon="suitcase"/>
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="text-left h5 white-text mx-3">EJECUTIVA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="text-left h5 white-text">EJECUTIVA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="ejecutivaIda" isOpen={this.state.collapseEjecutivaIda} color="white">
+                        <MDBRow className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapsePClaseIda("PClaseIda")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="1" md="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="2" md="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="text-left h5 white-text mx-3">PRIMERA CLASE</strong>
+                          </MDBCol>
+                          <MDBCol sm="1" md="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <MDBRow center>
+                            <input type="radio" className="ml-4 mr-3" />
+                            <MDBIcon icon="plane" size="lg" className="white-text ml-5"/>
+                            <strong className="text-left h5 white-text ml-5 mr-2">PRIMERA CLASE</strong>
+                            <MDBIcon icon="angle-down" size="2x" className="white-text ml-4"/>
+                          </MDBRow>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="PClaseIda" isOpen={this.state.collapsePClaseIda} color="white">
+                        <MDBRow className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1<MDBIcon className="mx-1" icon="suitcase"/>
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                    </MDBCol>
+                  </ShowAt>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
@@ -414,6 +604,140 @@ class index extends Component {
                           </MDBCol>
                         </MDBRow>  
                       </form>
+                    </MDBCol>
+                  </ShowAt>
+                  <ShowAt breakpoint="mediumAndBelow">
+                    <MDBCol>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="h5 white-text mx-3">ECONÓMICA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="h5 white-text">ECONÓMICA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="economicaVuelta" isOpen={this.state.collapseEconomicaVuelta}>
+                        <MDBRow className="py-3 white" between >
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="text-left h5 white-text mx-3">ECONÓMICA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="text-left h5 white-text">ECONÓMICA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="economica2Vuelta" isOpen={this.state.collapseEconomica2Vuelta} color="white">
+                        <MDBRow  className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1<MDBIcon className="mx-1" icon="suitcase"/>
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="text-left h5 white-text mx-3">EJECUTIVA</strong>
+                          </MDBCol>
+                          <MDBCol sm="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <input type="radio" className="ml-2"/>
+                          <MDBIcon icon="plane" size="lg" className="white-text"/>
+                          <strong className="text-left h5 white-text">EJECUTIVA</strong>
+                          <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="ejecutivaVuelta" isOpen={this.state.collapseEjecutivaVuelta} color="white">
+                        <MDBRow className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
+                      <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")} between>
+                        <ShowAt breakpoint="medium">
+                          <MDBCol sm="1" md="2">
+                            <input type="radio" />
+                          </MDBCol>
+                          <MDBCol sm="2" md="8" className="text-right">
+                            <MDBIcon icon="plane" size="lg" className="white-text"/>
+                            <strong className="text-left h5 white-text mx-3">PRIMERA CLASE</strong>
+                          </MDBCol>
+                          <MDBCol sm="1" md="1">
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                          </MDBCol>
+                        </ShowAt>
+                        <ShowAt breakpoint="small">
+                          <MDBRow center>
+                            <input type="radio" className="ml-4 mr-3" />
+                            <MDBIcon icon="plane" size="lg" className="white-text ml-5"/>
+                            <strong className="text-left h5 white-text ml-5 mr-2">PRIMERA CLASE</strong>
+                            <MDBIcon icon="angle-down" size="2x" className="white-text ml-4"/>
+                          </MDBRow>
+                        </ShowAt>
+                      </MDBRow>
+                      <MDBCollapse id="PClaseVuelta" isOpen={this.state.collapsePClaseVuelta} color="white">
+                        <MDBRow className="py-3 white" between>
+                          <MDBCol>
+                            <MDBRow center>
+                              <p>Clase: W</p>
+                            </MDBRow>
+                            <MDBRow center>
+                              1 <MDBIcon className="mx-1" icon="briefcase"/> 1<MDBIcon className="mx-1" icon="suitcase"/>
+                            </MDBRow>
+                          </MDBCol>
+                        </MDBRow>
+                      </MDBCollapse>
                     </MDBCol>
                   </ShowAt>
                 </MDBRow>
