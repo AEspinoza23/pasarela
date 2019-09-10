@@ -19,13 +19,18 @@
 }
 
 .caja{
-  border-left: 17px solid #ffffff;
+  border-left: 10px solid white;
+}
+
+.paddingCaja{
+  padding: 1rem;
+  border-radius: 2px;
 }
 
 #primary {
   padding: 1rem;
   background-color: #EE7500;
-  border-left: 17px solid #ffffff;
+  border-left: 17px solid #fff;
   color: #fff;
   text-align: center;
   border-radius: 2px;
@@ -34,7 +39,7 @@
 #secondary {
   padding: 1rem;
   background-color: #717171;
-  border-left: 17px solid #ffffff;
+  border-left: 17px solid #fff;
   color: #fff;
   text-align: center;
   border-radius: 2px
@@ -50,7 +55,7 @@
 #accent {
   padding: 1rem;
   background-color: #dfdfdf;
-  border-left: 17px solid #ffffff;
+  border-left: 17px solid #fff;
   text-align: center;
   border-radius: 2px
 }

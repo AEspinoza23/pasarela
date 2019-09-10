@@ -439,7 +439,7 @@ class index extends Component {
           <MDBCol className="h6" sm="12" md="12" lg="4">
             <HideAt breakpoint="mediumAndBelow">
               <MDBRow center className="caja colorConviasa">
-                <MDBBtn className="white-text" size="lg" color="orange" block>Salir</MDBBtn>
+                <MDBBtn flat className="white-text" size="lg" block>Salir</MDBBtn>
               </MDBRow>
             </HideAt>
             <MDBRow className="mt-1" id="primary">

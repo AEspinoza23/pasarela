@@ -339,7 +339,7 @@ class index extends Component {
                   <MDBRow center><p className="h6">44.4 USD</p></MDBRow>
                 </MDBCol>
               </MDBRow>
-              <MDBRow className="colorConviasa caja pb-2">
+              <MDBRow id="primary" className="pb-2">
                 <MDBCol>
                   <MDBRow end>
                     <p className="white-text h6">Total</p>

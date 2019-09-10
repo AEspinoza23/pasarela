@@ -9,7 +9,7 @@ export default class Datepicker extends React.Component {
     date: new Date()
   }
 
-  toggle = () => {
+  ztoggle = () => {
     this.setState({
       modal: !this.state.modal
     });

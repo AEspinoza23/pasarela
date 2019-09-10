@@ -21,9 +21,9 @@ export default class index extends Component {
             </p>
           </MDBCol>
         </MDBRow>
-        <MDBRow center className="h6">
-          <MDBCol id="accent" md="9">
-            <MDBRow className="border-bottom border-dark">
+        <MDBRow center >
+          <MDBCol id="accent" md="9" >
+            <MDBRow className="border-bottom border-dark h6">
               <MDBCol>
                 ITINERARIO:
               </MDBCol>
@@ -32,7 +32,7 @@ export default class index extends Component {
                 <p>VUELTA: PMV-CCS</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 RESERVA:
               </MDBCol>
@@ -41,28 +41,28 @@ export default class index extends Component {
               </MDBCol>
             </MDBRow>
             <MDBRow className="mt-3 border-bottom border-dark">
-              <MDBCol>
+              <MDBCol className="h6">
                 VUELO NUM:
               </MDBCol>
-              <MDBCol>
+              <MDBCol className="h6">
                 <p>CCS-PMV: 1234567</p>
                 <p>PMV-CCS: 8910111</p>
               </MDBCol>
             </MDBRow>
             <MDBRow className="border-bottom border-dark">
-              <MDBCol>
+              <MDBCol className="h6">
                 SALIDA:
               </MDBCol>
               <MDBCol>
                 <MDBRow>
-                  <MDBCol id="primary">
+                  <MDBCol className="colorConviasa paddingCaja white-text h6">
                     <div>Ida: CCS-PMV</div>
                     <div>Día: 12/12/2019</div>
                     <div>Hora: 12:00 PM</div>
                   </MDBCol>
                 </MDBRow>
                 <MDBRow>
-                  <MDBCol id="primary">
+                  <MDBCol className="colorConviasa paddingCaja white-text h6">
                     <div>Vuelta: PMV-CCS</div>
                     <div>Día: 30/12/2019</div>
                     <div>Hora: 12:00 PM</div>
@@ -71,19 +71,19 @@ export default class index extends Component {
               </MDBCol>
             </MDBRow>
             <MDBRow className="border-bottom border-dark">
-              <MDBCol>
+              <MDBCol className="h6">
                 LLEGADA:
               </MDBCol>
               <MDBCol>
                 <MDBRow>
-                  <MDBCol id="primary">
+                  <MDBCol className="colorConviasa paddingCaja white-text h6">
                     <div>Ida: CCS-PMV</div>
                     <div>Día: 12/12/2019</div>
                     <div>Hora: 12:00 PM</div>
                   </MDBCol>
                 </MDBRow>
                 <MDBRow>
-                  <MDBCol id="primary">
+                  <MDBCol className="colorConviasa paddingCaja white-text h6">
                     <div>Vuelta: PMV-CCS</div>
                     <div>Día: 30/12/2019</div>
                     <div>Hora: 12:00 PM</div>
@@ -91,7 +91,7 @@ export default class index extends Component {
                 </MDBRow>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 DURACIÓN:
               </MDBCol>
@@ -100,7 +100,7 @@ export default class index extends Component {
                 <p>VUELTA: 19:00</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 CLASE:
               </MDBCol>
@@ -109,7 +109,7 @@ export default class index extends Component {
                 <p>VUELTA: W</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 COSTO BOLETO(S):
               </MDBCol>
@@ -117,7 +117,7 @@ export default class index extends Component {
                 <p>300000</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 IMPUESTOS:
               </MDBCol>
@@ -125,7 +125,7 @@ export default class index extends Component {
                 <p>10000</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 TOTAL:
               </MDBCol>
@@ -133,7 +133,7 @@ export default class index extends Component {
                 <p>310000</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 TICKET NRO:
               </MDBCol>
@@ -141,7 +141,7 @@ export default class index extends Component {
                 <p>123123123123</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 PASAJERO(S):
               </MDBCol>
@@ -149,7 +149,7 @@ export default class index extends Component {
                 <p>MRS ALEJANDRA LAMAS</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 TELEFONOS:
               </MDBCol>
@@ -157,7 +157,7 @@ export default class index extends Component {
                 <p>+58 4145595599</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow className="mt-3 border-bottom border-dark">
+            <MDBRow className="mt-3 border-bottom border-dark h6">
               <MDBCol>
                 EMAIL:
               </MDBCol>
@@ -200,8 +200,8 @@ export default class index extends Component {
         </MDBRow>
         <Link to="/">
           <MDBRow center>
-            <MDBCol className="colorConviasa" sm="12" md="9">
-              <MDBBtn color="orange" block>
+            <MDBCol className="caja" color="orange" sm="12" md="9">
+              <MDBBtn block>
                 Finalizar
               </MDBBtn>
             </MDBCol>
