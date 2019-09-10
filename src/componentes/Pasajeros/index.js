@@ -7,7 +7,6 @@ import {
   MDBCollapse,
   MDBIcon,
   MDBInputGroup,
-  MDBContainer
 } from "mdbreact"
 import "../../index.css"
 import { Link } from 'react-router-dom'
@@ -50,15 +49,15 @@ class index extends Component {
 
   render() {
     return (
-      <MDBContainer fluid className="marginTop">
+      <div  className="marginTop">
         <MDBRow around className="mt-5 caja">
           <MDBCol sm="8" md="12" lg="8">
             <MDBRow>
               <MDBCol className="colorAccent">
-                <MDBRow className="colorConviasa py-3 mb-1">
+                <MDBRow className="colorConviasa caja py-3 mb-1">
                   <strong className="white-text h5 ml-3">Datos de Pasajero</strong> 
                 </MDBRow>
-                <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
+                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Adulto)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
@@ -150,7 +149,7 @@ class index extends Component {
                 <MDBRow className="pb-1">
                 </MDBRow>
                 {/* fin Collapse Adulto */}
-                <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
+                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Niño)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
@@ -200,7 +199,7 @@ class index extends Component {
                 <MDBRow className="pb-1">
                 </MDBRow>
                 {/* finCollapse Nino */}
-                <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
+                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Infante)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
                 </MDBRow>
@@ -253,7 +252,7 @@ class index extends Component {
             {/* formulario Pago Debito */}
             <MDBRow className="mt-1">
               <MDBCol className="colorAccent">
-                <MDBRow className="colorConviasa py-4">
+                <MDBRow className="colorConviasa caja py-4">
                   <MDBCol>
                     <MDBRow >
                       <strong className="h5 white-text ml-3">Seleccione su metodo de pago</strong>    
@@ -265,7 +264,7 @@ class index extends Component {
             </MDBRow>
             {/* fin formulario Pago Debito */}
             <Link to="/Resumen">
-              <MDBRow center>
+              <MDBRow className="caja" center>
                 <MDBBtn block color="grey" className="mb-1">Continuar</MDBBtn>
               </MDBRow>
             </Link>
@@ -355,7 +354,7 @@ class index extends Component {
             </MDBCollapse>
           </MDBCol>
         </MDBRow>
-      </MDBContainer>
+      </div>
     )
   }
 }

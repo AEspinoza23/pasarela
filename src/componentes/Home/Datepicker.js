@@ -15,7 +15,7 @@ export default class Datepicker extends React.Component {
     });
   }
 
-  onChange = date => this.setState({ date })
+  onChange = date => this.setState({ date, modal: !this.state.modal })
  
   render() {
     return (

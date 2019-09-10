@@ -12,8 +12,8 @@ class index extends Component {
   render() {
     return (
       <div>
-        <MDBNavbar fixed="top " className="colorConviasa">
-          <MDBCol md="12" lg="2" className="text-center">
+        <MDBNavbar fixed="top" className="colorConviasa">
+          <MDBCol sm="12" lg="2" className="text-center">
             <img src={LogoConviasa} alt="logo" />
           </MDBCol>
           <HideAt breakpoint="largeAndBelow">
