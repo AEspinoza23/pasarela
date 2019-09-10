@@ -8,6 +8,7 @@
 
 .colorConviasa {
   background-color: #EE7500;
+  color: #fff;
 }
 
 .colorConviasaG{
@@ -19,37 +20,38 @@
 }
 
 .caja{
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-left: 17px solid #fff;
 }
 
 #primary {
   padding: 1rem;
   background-color: #EE7500;
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-left: 17px solid #fff;
   color: #fff;
   text-align: center;
-  border-radius: 2px
+  border-radius: 2px;
 }
 
 #secondary {
   padding: 1rem;
   background-color: #717171;
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-left: 17px solid #fff;
   color: #fff;
   text-align: center;
   border-radius: 2px
 }
 
+#expansion {
+  padding: 1rem;
+  background-color: #717171;
+  text-align: center;
+  border-radius: 2px
+}
 
 #accent {
   padding: 1rem;
   background-color: #dfdfdf;
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
-  color: fff;
+  border-left: 17px solid #fff;
   text-align: center;
   border-radius: 2px
 }

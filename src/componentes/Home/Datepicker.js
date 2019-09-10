@@ -26,7 +26,7 @@ export default class Datepicker extends React.Component {
         <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="sm">
           <MDBRow center>
             <Calendar
-            onChange={this.onChange}
+            onChange={this.toggle}
             value={this.state.date}
             className="black-text"
             />

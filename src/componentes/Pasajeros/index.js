@@ -7,7 +7,6 @@ import {
   MDBCollapse,
   MDBIcon,
   MDBInputGroup,
-  MDBContainer
 } from "mdbreact"
 import "../../index.css"
 import { Link } from 'react-router-dom'
@@ -50,12 +49,12 @@ class index extends Component {
 
   render() {
     return (
-      <MDBContainer fluid className="marginTop">
+      <div  className="marginTop">
         <MDBRow around className="mt-5 caja">
           <MDBCol sm="8" md="12" lg="8">
             <MDBRow>
               <MDBCol className="colorAccent">
-                <MDBRow className="colorConviasa py-3 mb-1">
+                <MDBRow className="colorConviasa caja py-3 mb-1">
                   <strong className="white-text h5 ml-3">Datos de Pasajero</strong> 
                 </MDBRow>
                 <MDBRow className="colorConviasa py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
@@ -355,7 +354,7 @@ class index extends Component {
             </MDBCollapse>
           </MDBCol>
         </MDBRow>
-      </MDBContainer>
+      </div>
     )
   }
 }
