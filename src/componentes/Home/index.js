@@ -148,7 +148,7 @@ class index extends Component {
             <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de ída</strong><Datepicker/>
+                  <strong>Seleccione otra fecha de ída</strong><Datepicker />
                 </MDBRow>
                 <MDBRow id="secondary" between>
                   <MDBCol>
@@ -430,8 +430,8 @@ class index extends Component {
                           <MDBRow center>
                             <input type="radio" className="ml-4 mr-3" />
                             <MDBIcon icon="plane" size="lg" className="white-text ml-5"/>
-                            <strong className="text-left h5 white-text ml-5 mr-2">PRIMERA CLASE</strong>
-                            <MDBIcon icon="angle-down" size="2x" className="white-text ml-4"/>
+                            <strong className="text-left h5 white-text mx-5">PRIMERA CLASE</strong>
+                            <MDBIcon icon="angle-down" size="2x" className="white-text"/>
                           </MDBRow>
                         </ShowAt>
                       </MDBRow>
@@ -737,8 +737,8 @@ class index extends Component {
                           <MDBRow center>
                             <input type="radio" className="ml-4 mr-3" />
                             <MDBIcon icon="plane" size="lg" className="white-text ml-5"/>
-                            <strong className="text-left h5 white-text ml-5 mr-2">PRIMERA CLASE</strong>
-                            <MDBIcon icon="angle-down" size="2x" className="white-text ml-4"/>
+                            <strong className="text-left h5 white-text mx-5">PRIMERA CLASE</strong>
+                            <MDBIcon icon="angle-down" size="2x" className="white-text "/>
                           </MDBRow>
                         </ShowAt>
                       </MDBRow>
