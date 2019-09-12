@@ -145,6 +145,11 @@
   border-radius: 5px;
   background: rgba(15, 15, 14, 0.7);
 }
+
+.cursorSenal {
+  cursor: pointer
+}
+
 input[type=number]::-webkit-outer-spin-button,
 
 input[type=number]::-webkit-inner-spin-button {
