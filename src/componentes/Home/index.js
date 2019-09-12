@@ -147,7 +147,7 @@ class index extends Component {
       return(
         <div className="mt-5 h1 marginTop">
           <MDBCol className="marginTop">
-            carganding ...
+            cargando petición...  
           </MDBCol>
         </div>
       )    
@@ -291,7 +291,7 @@ class index extends Component {
                     </MDBCol>
                     <MDBCol md="6">
                       <form className="formulario">
-                        <MDBRow className="radio">
+                        <MDBRow className="radio radioVuelos">
                           <MDBCol id="cajasClases" className="mr-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasIda" value="W" id="economicaIda" />
@@ -336,7 +336,7 @@ class index extends Component {
                     <MDBCol>
                       <form className="formulario">
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaIda("economicaIda")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="economicaIda" />
                               <label htmlFor="economicaIda">
@@ -364,7 +364,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Ida("economica2Ida")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="economicaIdaSecundaria" />
                               <label htmlFor="economicaIdaSecundaria">
@@ -392,7 +392,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="ejecutivaIda" />
                               <label htmlFor="ejecutivaIda">
@@ -420,7 +420,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseIda("PClaseIda")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="primeraClaseIda" />
                               <label htmlFor="primeraClaseIda">
@@ -582,7 +582,7 @@ class index extends Component {
                     </MDBCol>
                     <MDBCol md="6">
                       <form className="formulario">
-                        <MDBRow className="radio">
+                        <MDBRow className="radio radioVuelos">
                           <MDBCol id="cajasClases" className="mr-1 z-depth-2">
                             <MDBRow center>
                               <input type="radio" name="cajasVuelta" value="W" id="economicaVuelta" />
@@ -627,7 +627,7 @@ class index extends Component {
                     <MDBCol>
                       <form className="formulario">
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="economicaVuelta" />
                               <label htmlFor="economicaVuelta">
@@ -655,7 +655,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="economicaVueltaSecundaria" />
                               <label htmlFor="economicaVueltaSecundaria">
@@ -683,7 +683,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="ejecutivaVuelta" />
                               <label htmlFor="ejecutivaVuelta">
@@ -711,7 +711,7 @@ class index extends Component {
                           </MDBRow>
                         </MDBCollapse>
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")} between>
-                          <MDBCol sm="5" className="radioTelefono">
+                          <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="primeraClaseVuelta" />
                               <label htmlFor="primeraClaseVuelta">

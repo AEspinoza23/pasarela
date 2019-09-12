@@ -25,10 +25,11 @@ function PagaloFacilDebito() {
       <MDBCol md="4">
         <MDBInput type="text" label="Cédula" />
       </MDBCol>
-      <MDBCol md="4" className="mt-4">
+      <MDBCol md="4" className="my-4">
         <select className="browser-default custom-select">
           <option value="" disabled selected>Seleccione su banco</option>
-          <option value="Tesoro">Banco del Tesoro</option>
+          <option value="Tesoro">Banco del Tesoro, C.A. Banco Universal</option>
+          <option value="Activo">Banco Activo, C.A. Banco Universal</option>
         </select>
       </MDBCol>
     </MDBRow>
@@ -173,22 +174,22 @@ export class SelectorPagos extends Component {
     return (
       <div>
         <form className="formulario">
-          <MDBRow center className="colorAccent caja radioMetodoPago">
+          <MDBRow center className="colorAccent caja radio radioMetodoPago">
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="tdd" name="metodoPago" type="radio" id="pfdebito"></input>
-              <label htmlFor="pfdebito"><img alt="imagen debito" src={pftdd} height="60px" /></label>
+              <label htmlFor="pfdebito"><img alt="imagen debito" src={pftdd} className="img-fluid" /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="trf" name="metodoPago" type="radio" id="pftrf"></input>
-              <label htmlFor="pftrf"><img alt="imagen transferencia" src={pftrf} height="60px" /></label>
+              <label htmlFor="pftrf"><img alt="imagen transferencia" src={pftrf} className="img-fluid" /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="tdc" name="metodoPago" type="radio" id="credito"></input>
-              <label htmlFor="credito"><img alt="imagen credito" src={pftdc} height="60px" /></label>
+              <label htmlFor="credito"><img alt="imagen credito" src={pftdc} className="img-fluid"  /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="petro" name="metodoPago" type="radio" id="petro"></input>
-              <label htmlFor="petro"><img alt="petro" src={petro} height="60px" /></label>
+              <label htmlFor="petro"><img alt="petro" src={petro} className="img-fluid" /></label>
             </MDBCol>
           </MDBRow>       
         </form>
