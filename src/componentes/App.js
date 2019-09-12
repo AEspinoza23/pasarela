@@ -3,14 +3,15 @@ import React, { Component } from "react";
 
 import Content from "./Global/Content"
 import Footer from "./Global/Footer";
-import Header from "./Global/Header"
-
-
+import Header from "./Global/Header";
 
 class App extends Component {
 
   render() {
+
     const { children } = this.props;
+    let { isFetch } = this.props;
+    console.log(isFetch)
     return (
       <div>
         <Header/>
