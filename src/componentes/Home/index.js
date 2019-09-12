@@ -9,7 +9,7 @@ import {
 import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
-import Datepicker from './Datepicker'
+import Datepicker from './Datepicker';
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
@@ -17,20 +17,26 @@ import axios from 'axios'
 
 class index extends Component {
 
-  state = {
-    collapseIda: false,
-    collapseVuelta: false,
-    collapseDetalles: false,
-    collapseEconomicaIda: false,
-    collapseEconomica2Ida: false,
-    collapseEjecutivaIda: false,
-    collapsePClaseIda: false,
-    collapseEconomicaVuelta: false,
-    collapseEconomica2Vuelta: false,
-    collapseEjecutivaVuelta: false,
-    collapsePClaseVuelta: false,
-    vuelos: []
+  constructor(props){
+    super(props);
+
+    this.state = {
+      collapseIda: false,
+      collapseVuelta: false,
+      collapseDetalles: false,
+      collapseEconomicaIda: false,
+      collapseEconomica2Ida: false,
+      collapseEjecutivaIda: false,
+      collapsePClaseIda: false,
+      collapseEconomicaVuelta: false,
+      collapseEconomica2Vuelta: false,
+      collapseEjecutivaVuelta: false,
+      collapsePClaseVuelta: false,
+      vuelos: [],
+      isFetch: 'true',
+    } 
   }
+
 
   componentDidMount() {
 
@@ -63,7 +69,7 @@ class index extends Component {
       headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
     }).then(response => response.data)
     .then((data) => {
-      this.setState({vuelos: data})
+      this.setState({vuelos: data, isFetch: false})
       console.log(this.state.vuelos)
     })
 
@@ -136,6 +142,16 @@ class index extends Component {
   }
 
   render() {
+
+    if (this.state.isFetch) {
+      return(
+        <div className="mt-5 h1 marginTop">
+          <MDBCol className="marginTop">
+            carganding ...
+          </MDBCol>
+        </div>
+      )    
+    }
     
     return (
       <div className="marginTop">

@@ -7,6 +7,10 @@ import {
   MDBInputGroup,
 } from "mdbreact"
 import "../../index.css";
+import pftdd from '../Global/img/pftdd.png'
+import pftrf from '../Global/img/pftrf.png'
+import pftdc from '../Global/img/pftdc.png'
+import petro from '../Global/img/petro.png'
 
 function PagaloFacilDebito() {
   return <div>
@@ -169,22 +173,22 @@ export class SelectorPagos extends Component {
     return (
       <div>
         <form className="formulario">
-          <MDBRow center className="colorConviasaG caja radio">
+          <MDBRow center className="colorAccent caja radioMetodoPago">
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="tdd" name="metodoPago" type="radio" id="pfdebito"></input>
-              <label htmlFor="pfdebito">PF Debito</label>
+              <label htmlFor="pfdebito"><img alt="imagen debito" src={pftdd} height="60px" /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="trf" name="metodoPago" type="radio" id="pftrf"></input>
-              <label htmlFor="pftrf"> PF Transferencia</label>
+              <label htmlFor="pftrf"><img alt="imagen transferencia" src={pftrf} height="60px" /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="tdc" name="metodoPago" type="radio" id="credito"></input>
-              <label htmlFor="credito">Credito</label>
+              <label htmlFor="credito"><img alt="imagen credito" src={pftdc} height="60px" /></label>
             </MDBCol>
             <MDBCol className="my-2" sm="12" md="3">
               <input onChange={this.cambiarMetodo} value="petro" name="metodoPago" type="radio" id="petro"></input>
-              <label htmlFor="petro">Petro Pago</label>
+              <label htmlFor="petro"><img alt="petro" src={petro} height="60px" /></label>
             </MDBCol>
           </MDBRow>       
         </form>
