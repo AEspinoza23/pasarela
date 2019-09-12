@@ -338,7 +338,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaIda("economicaIda")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasIda" value="W" id="economicaIda" />
+                              <input type="radio" name="cajasIda" value="W" id="economicaIda" onClick={this.toggleCollapseEconomicaIda("economicaIda")} />
                               <label htmlFor="economicaIda">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">ECONÓMICA</strong>
@@ -347,7 +347,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapseEconomicaIda("economicaIda")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -366,7 +366,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Ida("economica2Ida")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasIda" value="W" id="economicaIdaSecundaria" />
+                              <input type="radio" name="cajasIda" value="W" id="economicaIdaSecundaria"  onClick={this.toggleCollapseEconomica2Ida("economica2Ida")}/>
                               <label htmlFor="economicaIdaSecundaria">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">ECONÓMICA</strong>
@@ -375,7 +375,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text"  onClick={this.toggleCollapseEconomica2Ida("economica2Ida")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -394,7 +394,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasIda" value="W" id="ejecutivaIda" />
+                              <input type="radio" name="cajasIda" value="W" id="ejecutivaIda" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")}/>
                               <label htmlFor="ejecutivaIda">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">EJECUTIVA</strong>
@@ -403,7 +403,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -422,7 +422,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseIda("PClaseIda")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasIda" value="W" id="primeraClaseIda" />
+                              <input type="radio" name="cajasIda" value="W" id="primeraClaseIda" onClick={this.toggleCollapsePClaseIda("PClaseIda")} />
                               <label htmlFor="primeraClaseIda">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="text-left h5 white-text">PRIMERA CLASE</strong>
@@ -431,7 +431,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1" md="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapsePClaseIda("PClaseIda")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -629,7 +629,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasVuelta" value="W" id="economicaVuelta" />
+                              <input type="radio" name="cajasVuelta" value="W" id="economicaVuelta" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")}/>
                               <label htmlFor="economicaVuelta">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">ECONÓMICA</strong>
@@ -638,7 +638,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -657,7 +657,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasVuelta" value="W" id="economicaVueltaSecundaria" />
+                              <input type="radio" name="cajasVuelta" value="W" id="economicaVueltaSecundaria" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")}/>
                               <label htmlFor="economicaVueltaSecundaria">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">ECONÓMICA</strong>
@@ -666,7 +666,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -685,7 +685,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasVuelta" value="W" id="ejecutivaVuelta" />
+                              <input type="radio" name="cajasVuelta" value="W" id="ejecutivaVuelta" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} />
                               <label htmlFor="ejecutivaVuelta">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="h5 white-text">EJECUTIVA</strong>
@@ -694,7 +694,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -713,7 +713,7 @@ class index extends Component {
                         <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")} between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
-                              <input type="radio" name="cajasVuelta" value="W" id="primeraClaseVuelta" />
+                              <input type="radio" name="cajasVuelta" value="W" id="primeraClaseVuelta" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")}/>
                               <label htmlFor="primeraClaseVuelta">
                                 <MDBIcon icon="plane" size="lg" className="mr-1 white-text fa-flip-horizontal"/>
                                 <strong className="text-left h5 white-text">PRIMERA CLASE</strong>
@@ -722,7 +722,7 @@ class index extends Component {
                           </MDBCol>
                           <ShowAt breakpoint="mediumAndAbove">
                             <MDBCol sm="1" md="1">
-                              <MDBIcon icon="angle-down" size="2x" className="white-text"/>
+                              <MDBIcon icon="angle-down" size="2x" className="white-text" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")}/>
                             </MDBCol>
                           </ShowAt>
                         </MDBRow>
@@ -763,10 +763,10 @@ class index extends Component {
                 </Link>
                 <MDBRow className="mt-3">
                   <MDBCol>
-                    <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseIda("ida")} between>
+                    <MDBRow className="z-depth-2 colorConviasa py-3" between>
                       <MDBIcon icon="plane" size="2x" className="ml-3"/>
                       <strong className="ml-4 text-left h5 white-text" >IDA</strong>
-                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text mr-4 text-center cursorSenal" onClick={this.toggleCollapseIda("ida")}/>
                     </MDBRow>
                     <MDBCollapse id="ida" isOpen={this.state.collapseIda} color="white">
                       <MDBRow id="expansion" className="z-depth-2">
@@ -782,10 +782,10 @@ class index extends Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBCol>
-                    <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseVuelta("vuelta")} between>
+                    <MDBRow className="z-depth-2 colorConviasa py-3" between>
                       <MDBIcon icon="plane" size="2x" className="ml-3"/>
                       <strong className="ml-4 text-left h5 white-text">VUELTA</strong>
-                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4 cursorSenal" onClick={this.toggleCollapseVuelta("vuelta")}/>
                     </MDBRow>
                     <MDBCollapse id="vuelta" isOpen={this.state.collapseVuelta} color="white">
                       <MDBRow id="expansion" className="z-depth-2">
@@ -801,9 +801,9 @@ class index extends Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBCol>
-                    <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseDetalles("detalles")} between>
+                    <MDBRow className="z-depth-2 colorConviasa py-3" between>
                       <strong className="ml-4 text-left h5 white-text">Detalles</strong>
-                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4"/>
+                      <MDBIcon icon="angle-down" size="2x" className="white-text pr-4 cursorSenal" onClick={this.toggleCollapseDetalles("detalles")}/>
                     </MDBRow>
                     <MDBCollapse id="detalles" isOpen={this.state.collapseDetalles} color="white">
                       <MDBRow id="expansion" className="z-depth-2" >

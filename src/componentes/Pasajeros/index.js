@@ -57,9 +57,9 @@ class index extends Component {
                 <MDBRow className="colorConviasa caja py-3 mb-1">
                   <strong className="white-text h5 ml-3">Datos de Pasajero</strong> 
                 </MDBRow>
-                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseAdulto("DatosAdulto")} between>
+                <MDBRow className="colorConviasa caja py-3" between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Adulto)</strong>
-                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3 cursorSenal" onClick={this.toggleCollapseAdulto("DatosAdulto")}/>
                 </MDBRow>
                 {/* Collapse Adultos */}
                 <MDBCollapse id="DatosAdulto" isOpen={this.state.collapseIDAdulto} className="mt-1 white">
@@ -149,9 +149,9 @@ class index extends Component {
                 <MDBRow className="pb-1">
                 </MDBRow>
                 {/* fin Collapse Adulto */}
-                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseNino("DatosNino")} between>
+                <MDBRow className="colorConviasa caja py-3"  between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Niño)</strong>
-                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3 cursorSenal" onClick={this.toggleCollapseNino("DatosNino")}/>
                 </MDBRow>
                 {/* Collapse Nino */}
                 <MDBCollapse id="DatosNino" isOpen={this.state.collapseIDNino} className="mt-1 white">
@@ -199,9 +199,9 @@ class index extends Component {
                 <MDBRow className="pb-1">
                 </MDBRow>
                 {/* finCollapse Nino */}
-                <MDBRow className="colorConviasa caja py-3" onClick={this.toggleCollapseInfante("DatosInfante")} between>
+                <MDBRow className="colorConviasa caja py-3" between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Infante)</strong>
-                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3"/>
+                  <MDBIcon icon="angle-down" size="2x" className="white-text mr-3 cursorSenal" onClick={this.toggleCollapseInfante("DatosInfante")}/>
                 </MDBRow>
                 {/* Collapse Infantes */}
                 <MDBCollapse id="DatosInfante" isOpen={this.state.collapseIDInfante} className="mt-1 white">
@@ -310,9 +310,9 @@ class index extends Component {
                 <p>(x1)</p>
               </MDBCol>
             </MDBRow>
-            <MDBRow id="primary" onClick={this.toggleCollapseTasasyRecargos("TasasyRecargos")} between>
+            <MDBRow id="primary" between>
               <strong className="h5 left-text">Tasas y Recargos</strong>
-              <MDBIcon icon="angle-down" size="2x" className="white-text rigth-text"/>
+              <MDBIcon icon="angle-down" size="2x" className="white-text rigth-text cursorSenal" onClick={this.toggleCollapseTasasyRecargos("TasasyRecargos")}/>
             </MDBRow>
             <MDBCollapse id="TasasyRecargos" isOpen={this.state.collapseTasasyRecargos} className="white">
               <MDBRow id="primary">
