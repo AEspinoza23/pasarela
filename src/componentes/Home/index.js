@@ -335,7 +335,7 @@ class index extends Component {
                   <ShowAt breakpoint="largeAndBelow">
                     <MDBCol>
                       <form className="formulario">
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaIda("economicaIda")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="economicaIda" onClick={this.toggleCollapseEconomicaIda("economicaIda")} />
@@ -363,7 +363,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Ida("economica2Ida")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="economicaIdaSecundaria"  onClick={this.toggleCollapseEconomica2Ida("economica2Ida")}/>
@@ -391,7 +391,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="ejecutivaIda" onClick={this.toggleCollapseEjecutivaIda("ejecutivaIda")}/>
@@ -419,7 +419,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseIda("PClaseIda")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasIda" value="W" id="primeraClaseIda" onClick={this.toggleCollapsePClaseIda("PClaseIda")} />
@@ -626,7 +626,7 @@ class index extends Component {
                   <ShowAt breakpoint="largeAndBelow">
                     <MDBCol>
                       <form className="formulario">
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="economicaVuelta" onClick={this.toggleCollapseEconomicaVuelta("economicaVuelta")}/>
@@ -654,7 +654,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="economicaVueltaSecundaria" onClick={this.toggleCollapseEconomica2Vuelta("economica2Vuelta")}/>
@@ -682,7 +682,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3"  between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="ejecutivaVuelta" onClick={this.toggleCollapseEjecutivaVuelta("ejecutivaVuelta")} />
@@ -710,7 +710,7 @@ class index extends Component {
                             </MDBCol>
                           </MDBRow>
                         </MDBCollapse>
-                        <MDBRow className="z-depth-2 colorConviasa py-3" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")} between>
+                        <MDBRow className="z-depth-2 colorConviasa py-3" between>
                           <MDBCol sm="5" className="radio radioTelefono">
                             <MDBRow>
                               <input type="radio" name="cajasVuelta" value="W" id="primeraClaseVuelta" onClick={this.toggleCollapsePClaseVuelta("PClaseVuelta")}/>
