@@ -200,10 +200,10 @@ export default class index extends Component {
         </MDBRow>
         <Link to="/">
           <MDBRow center>
-            <MDBCol className="caja" color="orange" sm="12" md="9">
-              <MDBBtn block>
-                Finalizar
-              </MDBBtn>
+            <MDBCol sm="12" md="9">
+              <MDBRow className="caja" center>
+                <MDBBtn block color="grey" className="mb-1">Continuar</MDBBtn>
+              </MDBRow>
             </MDBCol>
           </MDBRow>
         </Link>
