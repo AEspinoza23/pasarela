@@ -274,11 +274,13 @@ class VueloVuelta extends Component {
   constructor(props){
     super(props);
     this.state = {
+      title: "Users",
+      users: [],
       collapseEconomicaVuelta: false,
       collapseEconomica2Vuelta: false,
       collapseEjecutivaVuelta: false,
       collapsePClaseVuelta: false,
-    }
+    };
   }
 
   toggleCollapseEconomicaVuelta = collapseEconomicaVuelta => () => {
@@ -561,23 +563,16 @@ class index extends Component {
       }
     }
 
-    // axios({
-    //   method: 'post',
-    //   url: url,
-    //   data: datosVuelos,
-    //   headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
-    // }).then(response => response.data)
-    // .then((data) => {
-    //   this.setState({vuelos: data, isFetch: false})
-    //   console.log(this.state.vuelos)    
-    // })
-
-    try {
-      const response = fetch('url', { posted_data: 'example' });
-      console.log('👉 Returned data:', response);
-    } catch (e) {
-      console.log(`😱 Axios request failed: ${e}`);
-    }
+    axios({
+      method: 'post',
+      url: url,
+      data: datosVuelos,
+      headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
+    }).then(response => response.data)
+    .then((data) => {
+      this.setState({vuelos: data, isFetch: false})
+      console.log(this.state.vuelos)    
+    })
 
 
 
