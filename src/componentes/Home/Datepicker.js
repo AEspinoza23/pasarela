@@ -3,11 +3,15 @@ import { MDBModal, MDBIcon, MDBView, MDBRow} from 'mdbreact';
 import Calendar from 'react-calendar'
 import '../../index.css'
 
+const moment = require('moment');
+moment.locale('es')
 
 export default class Datepicker extends React.Component {
   state = {
     modal: false,
-    date: new Date()
+    date: new Date(),
+    fechaIda: '',
+    fechaRegreso: ''
   }
 
   toggle = () => {
@@ -30,6 +34,10 @@ export default class Datepicker extends React.Component {
               onChange={this.onChange}
               value={this.state.date}
               className="black-text"
+            onChange={this.onChange}
+            value={this.state.date}
+            className="black-text"
+            minDate={new Date()}
             />
           </MDBRow>
         </MDBModal>
