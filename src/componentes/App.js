@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Content from "./Global/Content"
 import Footer from "./Global/Footer";
 import Header from "./Global/Header";
+import { MDBContainer } from "mdbreact";
 
 class App extends Component {
 
@@ -13,11 +14,11 @@ class App extends Component {
     let { isFetch } = this.props;
     console.log(isFetch)
     return (
-      <div>
+      <MDBContainer fluid>
         <Header/>
         <Content body={ children } />
         <Footer />
-      </div>
+      </MDBContainer>
     );
   }
 }
