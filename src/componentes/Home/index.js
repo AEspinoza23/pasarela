@@ -568,7 +568,7 @@ class index extends Component {
     }).then(response => response.data)
     .then((data) => {
       this.setState({vuelos: data, isFetch: false})
-      console.log(this.state.vuelos)
+      console.log(this.state.vuelos)    
     })
 
   }
