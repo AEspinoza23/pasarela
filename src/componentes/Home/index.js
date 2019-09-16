@@ -535,7 +535,7 @@ class index extends Component {
     } 
   }
 
-
+  
   componentDidMount() {
 
     const url = `/Airavailrs`;
@@ -614,7 +614,7 @@ class index extends Component {
             <MDBBtn className="mb-1 caja" size="lg" block color="orange">Salir</MDBBtn>
           </MDBRow>
         </ShowAt>
-        <MDBRow around>
+        <MDBRow>
           <MDBCol sm="12" lg="8">
             <MDBRow className="h6">
               <MDBCol>
