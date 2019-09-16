@@ -619,7 +619,10 @@ class index extends Component {
             <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de ída</strong><Datepicker />
+                  <strong>Seleccione otra fecha de ída</strong>
+                  <Datepicker 
+                    name="idaDate"
+                  />
                 </MDBRow>
                 <MDBRow id="secondary" between>
                   <MDBCol>
