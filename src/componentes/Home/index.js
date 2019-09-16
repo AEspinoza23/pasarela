@@ -5,11 +5,13 @@ import {
   MDBBtn,
   MDBIcon,
   MDBCollapse,
+  MDBModal, 
+  MDBView
 } from "mdbreact";
 import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
-import Datepicker from './Datepicker';
+import Calendar from 'react-calendar'
 import Test from '../Test.js'
 
 // Axios para hacer los llamados a API's
@@ -531,6 +533,10 @@ class index extends Component {
       collapseIda: false,
       collapseVuelta: false,
       collapseDetalles: false,
+      modalIda: false,
+      modalVuelta: false,
+      dateIda: new Date(),
+      dateVuelta: new Date(),
       vuelos: [],
       isFetch: 'true',
     } 
@@ -592,9 +598,20 @@ class index extends Component {
     }));
   }
 
-  
+  toggleModalIda = () => {
+    this.setState({
+      modalIda: !this.state.modalIda
+    });
+  }
 
-  
+  toggleModalVuelta = () => {
+    this.setState({
+      modalVuelta: !this.state.modalVuelta
+    });
+  }
+
+  onChangeIda = dateIda => this.setState({ dateIda, modalIda: !this.state.modalIda })
+  onChangeVuelta = dateVuelta => this.setState({ dateVuelta, modalVuelta: !this.state.modalVuelta })
 
   render() {
 
@@ -621,9 +638,22 @@ class index extends Component {
               <MDBCol>
                 <MDBRow id="primary">
                   <strong>Seleccione otra fecha de ída</strong>
-                  <Datepicker 
-                    name="idaDate"
-                  />
+                  <div>
+                    <MDBView hover zoom>
+                      <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalIda} />
+                    </MDBView>
+                    <MDBModal isOpen={this.state.modalIda} toggle={this.toggleModalIda} size="sm">
+                      <MDBRow center>
+                        <Calendar
+                        onChange={this.onChangeIda}
+                        value={this.state.dateIda}
+                        className="black-text"
+                        minDate={new Date()}
+                        maxDate={this.state.dateVuelta}
+                        />
+                      </MDBRow>
+                    </MDBModal>
+                  </div>
                 </MDBRow>
                 <MDBRow id="secondary" between>
                   <MDBCol>
@@ -707,7 +737,22 @@ class index extends Component {
             <MDBRow className="h6">
               <MDBCol>
                 <MDBRow id="primary">
-                  <strong>Seleccione otra fecha de vuelta</strong><Datepicker/>
+                  <strong>Seleccione otra fecha de vuelta</strong>
+                  <div>
+                    <MDBView hover zoom>
+                      <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalVuelta} />
+                    </MDBView>
+                    <MDBModal isOpen={this.state.modalVuelta} toggle={this.toggleModalVuelta} size="sm">
+                      <MDBRow center>
+                        <Calendar
+                        onChange={this.onChangeVuelta}
+                        value={this.state.dateVuelta}
+                        className="black-text"
+                        minDate={this.state.dateIda}
+                        />
+                      </MDBRow>
+                    </MDBModal>
+                  </div>
                 </MDBRow>
                 <MDBRow id="secondary" between>
                   <MDBCol>
