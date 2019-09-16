@@ -11,8 +11,6 @@ class App extends Component {
   render() {
 
     const { children } = this.props;
-    let { isFetch } = this.props;
-    console.log(isFetch)
     return (
       <MDBContainer fluid>
         <Header/>
