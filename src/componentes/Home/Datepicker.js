@@ -26,7 +26,7 @@ export default class Datepicker extends React.Component {
     return (
       <div>
         <MDBView hover zoom>
-          <MDBIcon className="px-2 hoverable cursorSeñal" size="lg" far icon="calendar-alt" onClick={this.toggle} />
+          <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggle} />
         </MDBView>
         <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="sm">
           <MDBRow center>
