@@ -12,13 +12,13 @@ import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
 import Calendar from 'react-calendar'
-import Test from '../Test.js'
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
 //const API_URL = 'http://kiu.surnet.io:8080';
 
-
+//helpers
+import frecuencias from '../../helpers/frecuencias'
 
  class VueloIda extends Component {
 
@@ -269,8 +269,6 @@ import axios from 'axios'
     )
   }
 }
-
-
 
 class VueloVuelta extends Component {
   constructor(props){
@@ -536,9 +534,11 @@ class index extends Component {
       modalIda: false,
       modalVuelta: false,
       dateIda: new Date(),
-      dateVuelta: new Date(),
+      dateVuelta: new Date("2019-11-12"),
       vuelos: [],
       isFetch: 'true',
+      fromFrecuency: [],
+      toFrecuency: []
     } 
   }
 
@@ -557,7 +557,7 @@ class index extends Component {
       back_info: {
         origin: "PMV", 
         destination: "CCS", 
-        date: "2019-11-12"
+        date: "2019-11-15"
       },
       max_stops: 0,
       passangers_info: {
@@ -578,7 +578,31 @@ class index extends Component {
       console.log(this.state.vuelos)
     })
 
+    let [fromFrecuency, toFrecuency] = this.from(datosVuelos.go_info.origin, datosVuelos.go_info.destination)
+    console.log(fromFrecuency, toFrecuency)
+    
+    this.setState({
+      fromFrecuency: fromFrecuency
+    })
+    console.log(this.state.fromFrecuency, fromFrecuency)
   }
+  
+  from(ida, vuelta) {
+    const dates = frecuencias[ida];
+    const {from, to} = dates[vuelta];
+
+    return [from, to]
+  }
+
+/*   fromAllowedDates(val) {
+    const day = new Date(val).getDay();
+    return this.fromFrecuency.includes(day);
+  }
+
+  toAllowedDates(val) {
+    const day = new Date(val).getDay();
+    return this.toFrecuency.includes(day);
+  } */
   
   toggleCollapseIda = collapseIda => () => {
     this.setState(prevState => ({
@@ -650,6 +674,7 @@ class index extends Component {
                         className="black-text"
                         minDate={new Date()}
                         maxDate={this.state.dateVuelta}
+                        tileDisabled={({date}) => date.getDay() === 0}
                         />
                       </MDBRow>
                     </MDBModal>
@@ -911,7 +936,6 @@ class index extends Component {
             </MDBRow>
           </MDBCol>
         </MDBRow>
-        <Test />
       </div>
     )
   }
