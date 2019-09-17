@@ -66,7 +66,7 @@ import axios from 'axios'
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
-                      <strong>Ciudad</strong>
+                      <strong></strong>
                     </MDBRow>
                     <MDBRow>
                       <strong>12:30</strong>
@@ -537,11 +537,28 @@ class index extends Component {
       collapseDetalles: false,
       vuelos: [],
       isFetch: 'true',
+      vueloIda: [],
+      vueloIdaClase: [],
+      vueloIdaClaseTrusted: [],
+      vueloIdaSegment: [],
+      vueloIdaSegSQuantity: [],
+      vueloIdaSegArriLocation: [],
+      vueloIdaSegArriTime: [],
+      vueloIdaSegCabin: [],
+      vueloIdaSegDepLocation: [], 
+      vueloIdaSegDepTime: [], 
+      vueloIdaSegDuration: [], 
+      vueloIdaSegEquipType: [], 
+      vueloIdaSegFlyghtNumber: [],
+      vueloIdaSegmealtype: [],
+      vueloIdaDefaultD: [],
+      vueloIdaDefaultDes: [],
+      vueloIdaDefaultO: [], 
     } 
   }
 
   
-  componentDidMount() {
+  async componentDidMount() {
 
     const url = `/Airavailrs`;
 
@@ -575,6 +592,7 @@ class index extends Component {
       this.setState({vuelos: data, isFetch: false})
       console.log(this.state.vuelos)
 
+
       //Vuelos Clase Ida
       let vueloIda = this.state.vuelos[0]
       let vueloVuelta = this.state.vuelos[1]
@@ -596,7 +614,7 @@ class index extends Component {
       let vueloIdaSegEquipType = vueloIda.Segment[0].equipType
       let vueloIdaSegFlyghtNumber = vueloIda.Segment[0].flyghtNumber
       let vueloIdaSegmealtype = vueloIda.Segment[0].mealtype
-
+      
 
       //default content Ida
 
