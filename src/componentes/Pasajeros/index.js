@@ -6,7 +6,7 @@ import {
   MDBInput,
   MDBCollapse,
   MDBIcon,
-  MDBInputGroup,
+  MDBInputGroup
 } from "mdbreact"
 import "../../index.css"
 import { Link } from 'react-router-dom'
@@ -71,7 +71,7 @@ class index extends Component {
                     <MDBInputGroup
                       containerClassName="mt-4"
                       inputs={
-                        <select className="browser-default custom-select">
+                        <select className="browser-default custom-select" placeholder="Select">
                           <option value="0">Titulo</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>

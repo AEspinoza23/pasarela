@@ -6,13 +6,13 @@ import {
   MDBIcon,
   MDBCollapse,
   MDBModal, 
-  MDBView
+  MDBView,
+  MDBTooltip
 } from "mdbreact";
 import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
 import Calendar from 'react-calendar'
-import Test from '../Test.js'
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
@@ -639,9 +639,19 @@ class index extends Component {
                 <MDBRow id="primary">
                   <strong>Seleccione otra fecha de ída</strong>
                   <div>
-                    <MDBView hover zoom>
-                      <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalIda} />
-                    </MDBView>
+                    <ShowAt breakpoint="mediumAndAbove">
+                      <MDBTooltip placement="top">
+                        <MDBBtn className="z-depth-0" flat style={{marginTop: "-15px"}}><MDBIcon size="2x" far icon="calendar-alt" onClick={this.toggleModalIda} /></MDBBtn>
+                        <div>
+                          Seleccione Fecha de Ida
+                        </div>
+                      </MDBTooltip>
+                    </ShowAt>
+                    <ShowAt breakpoint="small">
+                      <MDBView hover zoom>
+                        <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalIda} />
+                      </MDBView>
+                    </ShowAt>
                     <MDBModal isOpen={this.state.modalIda} toggle={this.toggleModalIda} size="sm">
                       <MDBRow center>
                         <Calendar
@@ -739,9 +749,21 @@ class index extends Component {
                 <MDBRow id="primary">
                   <strong>Seleccione otra fecha de vuelta</strong>
                   <div>
-                    <MDBView hover zoom>
-                      <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalVuelta} />
-                    </MDBView>
+                    <ShowAt breakpoint="mediumAndAbove">
+                      <MDBTooltip placement="top">
+                        <MDBBtn flat className="z-depth-0" style={{marginTop: "-15px"}} >
+                          <MDBIcon size="2x" far icon="calendar-alt" onClick={this.toggleModalVuelta} />
+                        </MDBBtn>
+                        <div>
+                          Seleccione fecha de vuelta
+                        </div>
+                      </MDBTooltip>
+                    </ShowAt>
+                    <ShowAt breakpoint="small">
+                      <MDBView hover zoom>
+                        <MDBIcon className="px-2 hoverable cursorSenal" size="lg" far icon="calendar-alt" onClick={this.toggleModalVuelta} />
+                      </MDBView>
+                    </ShowAt>
                     <MDBModal isOpen={this.state.modalVuelta} toggle={this.toggleModalVuelta} size="sm">
                       <MDBRow center>
                         <Calendar
@@ -911,7 +933,6 @@ class index extends Component {
             </MDBRow>
           </MDBCol>
         </MDBRow>
-        <Test />
       </div>
     )
   }
