@@ -10,7 +10,9 @@ import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Link } from 'react-router-dom'
 import Datepicker from './Datepicker';
-import Test from '../Test.js'
+import Test from '../Test.js';
+import { determineMeals, determineEquip, determineCity, determineMaletas, determineClasses, sleep  } from '../../helpers';
+
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
@@ -168,7 +170,7 @@ import axios from 'axios'
                 <MDBRow className="py-3 colorAccent" between >
                   <MDBCol>
                     <MDBRow center>
-                      <p>Clase: W</p>
+                      <p>Clase: W </p>
                     </MDBRow>
                     <MDBRow center>
                       1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -553,8 +555,8 @@ class index extends Component {
       back_info: {
         origin: "PMV", 
         destination: "CCS", 
-        date: "2019-11-12"
-      },
+        date: "2019-11-15"
+      }, 
       max_stops: 0,
       passangers_info: {
         adt: 1,
@@ -571,10 +573,71 @@ class index extends Component {
     }).then(response => response.data)
     .then((data) => {
       this.setState({vuelos: data, isFetch: false})
-      console.log(this.state.vuelos)    
+      console.log(this.state.vuelos)
+
+      //Vuelos Clase Ida
+      let vueloIda = this.state.vuelos[0]
+      let vueloVuelta = this.state.vuelos[1]
+      let vueloIdaClase = vueloIda.Segment[0].Class[0]
+      let vueloIdaClaseTrusted = determineClasses(vueloIdaClase)
+
+      console.log("Vuelo Clases: " + vueloIdaClaseTrusted);
+
+      //Segment content Ida
+
+      let vueloIdaSegment = vueloIda.Segment[0]
+      let vueloIdaSegSQuantity = vueloIda.Segment[0].StopQuantity
+      let vueloIdaSegArriLocation = vueloIda.Segment[0].arrivalLocation
+      let vueloIdaSegArriTime = vueloIda.Segment[0].arrivalTime
+      let vueloIdaSegCabin = vueloIda.Segment[0].cabin
+      let vueloIdaSegDepLocation = vueloIda.Segment[0].depatureLocation
+      let vueloIdaSegDepTime = vueloIda.Segment[0].departureTime
+      let vueloIdaSegDuration = vueloIda.Segment[0].duration
+      let vueloIdaSegEquipType = vueloIda.Segment[0].equipType
+      let vueloIdaSegFlyghtNumber = vueloIda.Segment[0].flyghtNumber
+      let vueloIdaSegmealtype = vueloIda.Segment[0].mealtype
+
+
+      //default content Ida
+
+        let vueloIdaDefaultD = vueloIda.departure;
+        let vueloIdaDefaultDes = vueloIda.destination;
+        let vueloIdaDefaultO = vueloIda.origin;
+
+        console.log(vueloIdaDefaultD +" "+  vueloIdaDefaultDes +" "+ vueloIdaDefaultO);
+        
+      //Vuelos Clase Vuelta
+      let vueloVueltaClase = vueloVuelta.Segment[0].Class[0]
+      let vueloVueltaClaseTrusted = determineClasses(vueloVueltaClase)
+
+      console.log("Vuelo Clases: " + vueloVueltaClaseTrusted);
+
+      //Segment content Vuelta
+
+      let vueloVueltaSegment = vueloVuelta.Segment[0]
+      let vueloVueltaSegSQuantity = vueloVuelta.Segment[0].StopQuantity
+      let vueloVueltaSegArriLocation = vueloVuelta.Segment[0].arrivalLocation
+      let vueloVueltaSegArriTime = vueloVuelta.Segment[0].arrivalTime
+      let vueloVueltaSegCabin = vueloVuelta.Segment[0].cabin
+      let vueloVueltaSegDepLocation = vueloVuelta.Segment[0].depatureLocation
+      let vueloVueltaSegDepTime = vueloVuelta.Segment[0].departureTime
+      let vueloVueltaSegDuration = vueloVuelta.Segment[0].duration
+      let vueloVueltaSegEquipType = vueloVuelta.Segment[0].equipType
+      let vueloVueltaSegFlyghtNumber = vueloVuelta.Segment[0].flyghtNumber
+      let vueloVueltaSegmealtype = vueloVuelta.Segment[0].mealtype
+
+
+      //default content Vuelta
+
+        let vueloVueltaDefaultD = vueloVuelta.departure;
+        let vueloVueltaDefaultDes = vueloVuelta.destination;
+        let vueloVueltaDefaultO = vueloVuelta.origin;
+
+        console.log(vueloVueltaDefaultD +" "+  vueloVueltaDefaultDes +" "+ vueloVueltaDefaultO);
+        
+      
+      
     })
-
-
 
   }
   
