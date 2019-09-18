@@ -1,374 +1,374 @@
 module.exports = {
   CCS: {
     BLA: {
-      from: [5],
-      to: [5]
+      from: [6],
+      to: [6]
     },
     BNS: {
-      from: [1, 3],
-      to: [1, 3]
+      from: [2, 4],
+      to: [2, 4]
     },
     CAJ: {
+      from: [2, 4],
+      to: [2, 4]
+    },
+    VIG: {
+      from: [5],
+      to: [5]
+    },
+    LFR: {
+      from: [4],
+      to: [4]
+    },
+    LSP: {
+      from: [3],
+      to: [3]
+    },
+    LRV: {
+      from: [1, 2, 3, 4, 5, 6, 0],
+      to: [1, 2, 3, 4, 5, 6, 0]
+    },
+    MAR: {
+      from: [5],
+      to: [5]
+    },
+    STD: {
+      from: [2, 6],
+      to: [2, 6]
+    },
+    CUM: {
+      from: [4],
+      to: [4]
+    },
+    PMV: {
+      from: [1, 2, 3, 4, 5, 6, 0],
+      to: [1, 2, 3, 4, 0]
+    },
+    MUN: {
+      from: [2, 6],
+      to: [3, 6]
+    },
+    PZO: {
+      from: [3, 0],
+      to: [3, 5, 0]
+    },
+    MYC: {
+      from: [1, 2],
+      to: [1, 2]
+    },
+    PYH: {
+      from: [4],
+      to: [4]
+    },
+    SFD: {
+      from: [6],
+      to: [6]
+    },
+    SOM: {
+      from: [6],
+      to: [6]
+    },
+    GYE: {
+      from: [4],
+      to: [1]
+    },
+    HAV: {
+      from: [3, 4, 0],
+      to: [1, 3, 5]
+    },
+    PTY: {
+      from: [4, 0],
+      to: [1, 5]
+    },
+    UIO: {
       from: [1, 3],
       to: [1, 3]
     },
-    VIG: {
-      from: [4],
-      to: [4]
-    },
-    LFR: {
-      from: [3],
-      to: [3]
-    },
-    LSP: {
-      from: [2],
-      to: [2]
-    },
-    LRV: {
-      from: [0, 1, 2, 3, 4, 5, 6],
-      to: [0, 1, 2, 3, 4, 5, 6]
-    },
-    MAR: {
-      from: [4],
-      to: [4]
-    },
-    STD: {
-      from: [1, 5],
-      to: [1, 5]
-    },
-    CUM: {
-      from: [3],
-      to: [3]
-    },
-    PMV: {
-      from: [0, 1, 2, 3, 4, 5, 6],
-      to: [0, 1, 2, 3, 6]
-    },
-    MUN: {
-      from: [1, 5],
-      to: [2, 5]
-    },
-    PZO: {
-      from: [2, 6],
-      to: [2, 4, 6]
-    },
-    MYC: {
-      from: [0, 1],
-      to: [0, 1]
-    },
-    PYH: {
-      from: [3],
-      to: [3]
-    },
-    SFD: {
-      from: [5],
-      to: [5]
-    },
-    SOM: {
-      from: [5],
-      to: [5]
-    },
-    GYE: {
-      from: [3],
-      to: [0]
-    },
-    HAV: {
-      from: [2, 3, 6],
-      to: [0, 2, 4]
-    },
-    PTY: {
-      from: [3, 6],
-      to: [0, 4]
-    },
-    UIO: {
-      from: [0, 2],
-      to: [0, 2]
-    },
     SQD: {
-      from: [0, 2],
-      to: [0, 2]
+      from: [1, 3],
+      to: [1, 3]
     },
     VVI: {
-      from: [2, 4],
-      to: [6]
+      from: [3, 5],
+      to: [0]
     }
   },
   BLA: {
     CCS: {
-      from: [],
-      to: [4]
+      from: [6],
+      to: [6]
     }
   },
   BNS: {
     CCS: {
-      from: [1, 3],
-      to: [1, 3]
+      from: [2, 4],
+      to: [2, 4]
     }
   },
   BRM: {
     PMV: {
-      from: [1],
-      to: [1]
+      from: [2],
+      to: [2]
     }
   },
   CAJ: {
     PZO: {
-      from: [2, 5],
-      to: [2, 5]
+      from: [3, 6],
+      to: [3, 6]
     }
   },
   CUM: {
     CCS: {
-      from: [3],
-      to: [3]
+      from: [4],
+      to: [4]
     }
   },
   VIG: {
     CCS: {
-      from: [4],
-      to: [4]
+      from: [5],
+      to: [5]
     }
   },
   LFR: {
     CCS: {
-      from: [3],
-      to: [3]
+      from: [4],
+      to: [4]
     }
   },
   LSP: {
     CCS: {
-      from: [2],
-      to: [2]
+      from: [3],
+      to: [3]
     }
   },
   LRV: {
     CCS: {
-      from: [0, 1, 2, 3, 4, 5, 6],
-      to: [0, 1, 2, 3, 4, 5, 6]
+      from: [1, 2, 3, 4, 5, 6, 0],
+      to: [1, 2, 3, 4, 5, 6, 0]
     },
     PMV: {
-      from: [4, 6],
-      to: [4, 6]
+      from: [5, 0],
+      to: [5, 0]
     },
     VLN: {
-      from: [4, 6],
-      to: [4, 6]
+      from: [5, 0],
+      to: [5, 0]
     }
   },
   MAR: {
     CCS: {
-      from: [4, 6],
-      to: [4]
+      from: [5, 0],
+      to: [5]
     },
     MUN: {
-      from: [2],
-      to: [1]
+      from: [3],
+      to: [2]
     },
     PMV: {
-      from: [4],
-      to: [6]
+      from: [5],
+      to: [0]
     }
   },
   MYC: {
     CCS: {
-      from: [0, 1],
-      to: [0, 1]
+      from: [1, 2],
+      to: [1, 2]
     },
     SFD: {
-      from: [0],
-      to: [0]
-    },
-    SOM: {
       from: [1],
       to: [1]
+    },
+    SOM: {
+      from: [2],
+      to: [2]
     }
   },
   MUN: {
     CCS: {
-      from: [2, 5],
-      to: [1, 5]
+      from: [3, 6],
+      to: [2, 6]
     },
     MAR: {
-      from: [1],
-      to: [2]
+      from: [2],
+      to: [3]
     },
     PMV: {
-      from: [1, 3],
-      to: [1, 3]
+      from: [2, 4],
+      to: [2, 4]
     }
   },
   PMV: {
     BRM: {
+      from: [2],
+      to: [2]
+    },
+    CCS: {
+      from: [1, 2, 3, 5, 0],
+      to: [1, 2, 3, 4, 5, 6, 0]
+    },
+    LRV: {
+      from: [5, 0],
+      to: [5, 0]
+    },
+    MAR: {
+      from: [0],
+      to: [5]
+    },
+    MUN: {
+      from: [2, 4],
+      to: [2, 4]
+    },
+    PZO: {
+      from: [3, 4, 5, 6],
+      to: [3, 4, 5, 6]
+    },
+    STD: {
+      from: [2, 6],
+      to: [2, 6]
+    },
+    TUV: {
+      from: [4],
+      to: [4]
+    },
+    VLN: {
       from: [1],
       to: [1]
     },
-    CCS: {
-      from: [0, 1, 2, 4, 6],
-      to: [0, 1, 2, 3, 4, 5, 6]
-    },
-    LRV: {
-      from: [4, 6],
-      to: [4, 6]
-    },
-    MAR: {
-      from: [6],
-      to: [4]
-    },
-    MUN: {
-      from: [1, 3],
-      to: [1, 3]
-    },
-    PZO: {
-      from: [2, 3, 4, 5],
-      to: [2, 3, 4, 5]
-    },
-    STD: {
-      from: [1, 5],
-      to: [1, 5]
-    },
-    TUV: {
-      from: [3],
-      to: [3]
-    },
-    VLN: {
-      from: [0],
-      to: [0]
-    },
     GYE: {
-      from: [6],
-      to: [3]
+      from: [0],
+      to: [4]
     },
   },
   PYH: {
     CCS: {
-      from: [3],
-      to: [1, 3]
+      from: [4],
+      to: [2, 4]
     }
   },
   PZO: {
     CAJ: {
-      from: [2, 5],
-      to: [2, 5]
+      from: [3, 6],
+      to: [3, 6]
     },
     CCS: {
-      from: [2, 4, 6],
-      to: [2, 6]
+      from: [3, 5, 0],
+      to: [3, 0]
     },
     PMV: {
-      from: [2, 3, 4, 5],
-      to: [2, 3, 4, 5]
+      from: [3, 4, 5, 6],
+      to: [3, 4, 5, 6]
     },
     VLN: {
-      from: [4],
-      to: [4]
+      from: [6],
+      to: [6]
     }
   },
   SFD: {
     CCS: {
-      from: [5],
-      to: [5]
-    },
-    MYC: {
-      from: [0],
-      to: [0]
-    }
-  },
-  SOM: {
-    CCS: {
-      from: [5],
-      to: [5]
+      from: [6],
+      to: [6]
     },
     MYC: {
       from: [1],
       to: [1]
     }
   },
+  SOM: {
+    CCS: {
+      from: [6],
+      to: [6]
+    },
+    MYC: {
+      from: [2],
+      to: [2]
+    }
+  },
   STD: {
     CCS: {
-      from: [1, 5],
-      to: [1, 5]
+      from: [2, 6],
+      to: [2, 6]
     },
     PMV: {
-      from: [1, 5],
-      to: [1, 5]
+      from: [2, 6],
+      to: [2, 6]
     }
   },
   TUV: {
     PMV: {
-      from: [3],
-      to: [3]
-    }
-  },
-  VLN: {
-    LRV: {
-      from: [4, 6],
-      to: [4, 6]
-    },
-    PMV: {
-      from: [0],
-      to: [0]
-    },
-    PZO: {
       from: [4],
       to: [4]
     }
   },
-  GYE: {
-    CCS: {
-      from: [0],
-      to: [3]
+  VLN: {
+    LRV: {
+      from: [5, 0],
+      to: [5, 0]
     },
     PMV: {
-      from: [3],
-      to: [6]
+      from: [1],
+      to: [1]
+    },
+    PZO: {
+      from: [5],
+      to: [5]
+    }
+  },
+  GYE: {
+    CCS: {
+      from: [1],
+      to: [4]
+    },
+    PMV: {
+      from: [4],
+      to: [0]
     }
   },
   HAV: {
     CCS: {
-      from: [0, 2, 4],
-      to: [2, 3, 6]
+      from: [1, 3, 5],
+      to: [3, 4, 0]
     },
     MGA: {
-      from: [2, 3, 6],
-      to: [0, 2, 4]
+      from: [3, 4, 0],
+      to: [1, 3, 5]
     }
   },
   MGA: {
     HAV: {
-      from: [0, 2, 4],
-      to: [2, 3, 6]
+      from: [1, 3, 5],
+      to: [3, 4, 0]
     },
     PTY: {
-      from: [0, 4],
-      to: [3, 6]
+      from: [1, 5],
+      to: [4, 0]
     }
   },
   PTY: {
     CCS: {
-      from: [0, 4],
-      to: [3, 6]
+      from: [1, 5],
+      to: [4, 0]
     },
     MGA: {
-      from: [3, 6],
-      to: [0, 4]
+      from: [4, 0],
+      to: [1, 5]
     }
   },
   UIO: {
     CCS: {
-      from: [0, 2],
-      to: [0, 2]
+      from: [1, 3],
+      to: [1, 3]
     }
   },
   SDQ: {
     CCS: {
-      from: [0, 2],
-      to: [0, 2]
+      from: [1, 3],
+      to: [1, 3]
     }
   },
   VVI: {
     CCS: {
-      from: [6],
-      to: [2, 4]
+      from: [0],
+      to: [3, 5]
     }
   }
 }
