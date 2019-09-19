@@ -146,7 +146,7 @@ export default class index extends Component {
                 PASAJERO(S):
               </MDBCol>
               <MDBCol>
-                <p>MRS ALEJANDRA LAMAS</p>
+                <p>MRS Julian de las Casas</p>
               </MDBCol>
             </MDBRow>
             <MDBRow className="mt-3 border-bottom border-dark h6">

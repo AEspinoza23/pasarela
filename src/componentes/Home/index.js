@@ -16,6 +16,9 @@ import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Redirect } from 'react-router-dom'
 import Calendar from 'react-calendar'
+import Test from '../Test.js';
+import { determineMeals, determineEquip, determineCity, determineMaletas, determineClasses, sleep  } from '../../helpers';
+
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
@@ -32,8 +35,84 @@ import frecuencias from '../../helpers/frecuencias'
       collapseEconomicaIda: false,
       collapseEconomica2Ida: false,
       collapseEjecutivaIda: false,
-      collapsePClaseIda: false
+      collapsePClaseIda: false,
+      //Segment content Ida
+      vueloIdaSegment: [],
+      vueloIdaSegSQuantity: [],
+      vueloIdaSegArriLocation: [],
+      vueloIdaSegArriTime: [],
+      vueloIdaSegCabin: [],
+      vueloIdaSegDepLocation: [],
+      vueloIdaSegDepTime: [],
+      vueloIdaSegDuration: [],
+      vueloIdaSegEquipType: [],
+      vueloIdaSegFlyghtNumber: [],
+      vueloIdaSegmealtype: [],
+      //default content Ida
+      vueloIdaDefaultD: [],
+      vueloIdaDefaultDes: [],
+      vueloIdaDefaultO: [],
     }
+  }
+
+  componentDidMount() {
+    const url = `/Airavailrs`;
+
+    let datosVuelos = {
+      direct_flight: false,
+      go_info: {
+        origin: "CCS", 
+        destination: "PMV", 
+        date: "2019-11-11"
+      },
+      back_info: {
+        origin: "PMV", 
+        destination: "CCS", 
+        date: "2019-11-15"
+      }, 
+      max_stops: 0,
+      passangers_info: {
+        adt: 1,
+        cnn: 0, 
+        inf: 0
+      }
+    }
+    axios({
+      method: 'post',
+      url: url,
+      data: datosVuelos,
+      headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
+    }).then(response => response.data)
+    .then((data,
+          vueloIdaSegment,
+          vueloIdaSegSQuantity,
+          vueloIdaSegArriLocation,
+          vueloIdaSegArriTime,
+          vueloIdaSegCabin,
+          vueloIdaSegDepLocation,
+          vueloIdaSegDepTime,
+          vueloIdaSegDuration,
+          vueloIdaSegEquipType,
+          vueloIdaSegFlyghtNumber,
+          vueloIdaSegmealtype) => {
+      this.setState({
+        vuelo: data,
+        isFetch: false, 
+        vueloIdaSegment: vueloIdaSegment,
+        vueloIdaSegSQuantity: vueloIdaSegSQuantity,
+        vueloIdaSegArriLocation: vueloIdaSegArriLocation,
+        vueloIdaSegArriTime: vueloIdaSegArriTime,
+        vueloIdaSegCabin: vueloIdaSegCabin,
+        vueloIdaSegDepLocation: vueloIdaSegDepLocation,
+        vueloIdaSegDepTime: vueloIdaSegDepTime,
+        vueloIdaSegDuration: vueloIdaSegDuration,
+        vueloIdaSegEquipType: vueloIdaSegEquipType,
+        vueloIdaSegFlyghtNumber: vueloIdaSegFlyghtNumber,
+        vueloIdaSegmealtype: vueloIdaSegmealtype,
+      })
+      console.log(this.state.vuelos);
+      
+    })
   }
 
   toggleCollapseEconomicaIda = collapseEconomicaIda => () => {
@@ -70,7 +149,7 @@ import frecuencias from '../../helpers/frecuencias'
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
-                      <strong>Ciudad</strong>
+                      <strong></strong>
                     </MDBRow>
                     <MDBRow>
                       <strong>12:30</strong>
@@ -174,7 +253,7 @@ import frecuencias from '../../helpers/frecuencias'
                 <MDBRow className="py-3 colorAccent" between >
                   <MDBCol>
                     <MDBRow center>
-                      <p>Clase: W</p>
+                      <p>Clase: W </p>
                     </MDBRow>
                     <MDBRow center>
                       1 <MDBIcon className="mx-1" icon="briefcase"/> 1 <MDBIcon className="mx-1" icon="suitcase" />
@@ -278,11 +357,33 @@ class VueloVuelta extends Component {
   constructor(props){
     super(props);
     this.state = {
+      title: "Users",
+      users: [],
       collapseEconomicaVuelta: false,
       collapseEconomica2Vuelta: false,
       collapseEjecutivaVuelta: false,
       collapsePClaseVuelta: false,
-    }
+      // //Vuelos Clase Vuelta
+      // vueloVueltaClase: [],
+      // vueloVueltaClaseTrusted: [], 
+      // //Segment content Vuelta
+      // vueloVueltaSegment: [],
+      // vueloVueltaSegSQuantity: [],
+      // vueloVueltaSegArriLocation: [],
+      // vueloVueltaSegArriTime: [],
+      // vueloVueltaSegCabin: [],
+      // vueloVueltaSegDepLocation: [],
+      // vueloVueltaSegDepTime: [],
+      // vueloVueltaSegDuration: [],
+      // vueloVueltaSegEquipType: [],
+      // vueloVueltaSegFlyghtNumber: [],
+      // vueloVueltaSegmealtype: [],
+      // //default content Vuelta
+      // vueloVueltaDefaultD: [],
+      // vueloVueltaDefaultDes: [],
+      // vueloVueltaDefaultO: [], 
+
+    };
   }
 
   toggleCollapseEconomicaVuelta = collapseEconomicaVuelta => () => {
@@ -592,7 +693,7 @@ class index extends Component {
         origin: "PMV", 
         destination: "CCS", 
         date: "2019-11-15"
-      },
+      }, 
       max_stops: 0,
       passangers_info: {
         adt: 1,

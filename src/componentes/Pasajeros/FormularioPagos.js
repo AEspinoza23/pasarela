@@ -38,7 +38,6 @@ function PagaloFacilDebito() {
 
 function PagaloFacilTrf(){
   return <div className="colorAccent caja">
-    mensaje PagaloFacilTrf
   </div>
 }
 
