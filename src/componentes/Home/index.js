@@ -334,12 +334,12 @@ import frecuencias from '../../helpers/frecuencias'
                 </ShowAt>
               </MDBRow>
               <MDBCollapse id="PClaseIda" isOpen={this.state.collapsePClaseIda} color="white">
-                <MDBRow className="py-3 white" between>
-                  <MDBCol>
-                    <MDBRow center>
-                      <p>Clase: W</p>
-                    </MDBRow>
-                    <MDBRow center>
+                <MDBRow className="py-3 white" between> 
+                  <MDBCol>  
+                    <MDBRow center> 
+                      <p>Clase: W</p> 
+                    </MDBRow> 
+                    <MDBRow center> 
                       1 <MDBIcon className="mx-1" icon="briefcase"/> 1<MDBIcon className="mx-1" icon="suitcase"/>
                     </MDBRow>
                   </MDBCol>
@@ -673,7 +673,9 @@ class index extends Component {
       toFrecuency: [],
       redireccion: false,
       botonContinuar: true,
-      returnPage: "conviasa.aero"
+      returnPage: "conviasa.aero",
+      checkIda: false,
+      checkVuelta: false
     } 
   }
 
@@ -783,16 +785,6 @@ class index extends Component {
 
     return [from, to]
   }
-
-/*   fromAllowedDates(val) {
-    const day = new Date(val).getDay();
-    return this.fromFrecuency.includes(day);
-  }
-
-  toAllowedDates(val) {
-    const day = new Date(val).getDay();
-    return this.toFrecuency.includes(day);
-  } */
   
   toggleCollapseIda = collapseIda => () => {
     this.setState(prevState => ({
@@ -838,6 +830,34 @@ class index extends Component {
 
   onChangeIda = dateIda => this.setState({ dateIda, modalIda: !this.state.modalIda })
   onChangeVuelta = dateVuelta => this.setState({ dateVuelta, modalVuelta: !this.state.modalVuelta })
+
+  checkIda(event) {
+    this.setState({
+      checkIda: !this.checkIda
+    })
+    alert('seleccionado ida')
+    if (this.state.checkVuelta) {
+      console.log('Vuelo Ida')
+    }
+  }
+
+  checkVuelta(event) {
+    this.setState({
+      checkVuelta: !this.checkVuelta
+    })
+    alert('seleccionado vuelta')
+    if (this.state.checkIda) {
+      console.log('Vuelo Vuelta')
+    }
+  }
+
+  getPrice() {
+
+  }
+
+  errorPrice() {
+
+  }
 
   render() {
 
@@ -982,7 +1002,7 @@ class index extends Component {
                     </MDBCol>
                   </ShowAt>
                 </MDBRow>
-                <VueloIda/>
+                <VueloIda />
               </MDBCol>
             </MDBRow>
             <MDBRow className="h6">
