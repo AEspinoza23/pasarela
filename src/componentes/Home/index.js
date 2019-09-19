@@ -606,17 +606,15 @@ class index extends Component {
       headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
     }).then(response => response.data)
     .then((data) => {
-      this.setState({vuelos: data, isFetch: false})
-      console.log(this.state.vuelos)
+      this.setState({vuelos: data, isFetch: false})  
+      let [fromFrecuency, toFrecuency] = this.from(datosVuelos.go_info.origin, datosVuelos.go_info.destination)
+      this.setState({fromFrecuency: fromFrecuency, toFrecuency: toFrecuency})
+      console.log('datos de vuelos:',this.state.vuelos)
+      console.log('Frecuencias Ida:',this.state.fromFrecuency)
+      console.log('Frecuencias Vuelta:',this.state.toFrecuency)
     })
-
-    let [fromFrecuency, toFrecuency] = this.from(datosVuelos.go_info.origin, datosVuelos.go_info.destination)
-    console.log(fromFrecuency, toFrecuency)
     
-    this.setState({
-      fromFrecuency: fromFrecuency
-    })
-    console.log(this.state.fromFrecuency)
+    
   }
 
   // componentDidMount() {
@@ -773,7 +771,21 @@ class index extends Component {
                         className="black-text"
                         minDate={new Date()}
                         maxDate={this.state.dateVuelta}
-                        tileDisabled={({date}) => date.getDay() === 1 || date.getDay() === 3 || date.getDay() === 6}
+                        tileDisabled={
+                          ({date}) => date.getDay() !== this.state.fromFrecuency[0]
+                           && 
+                           date.getDay() !== this.state.fromFrecuency[1]
+                           &&
+                           date.getDay() !== this.state.fromFrecuency[2]
+                           &&
+                           date.getDay() !== this.state.fromFrecuency[3]
+                           &&
+                           date.getDay() !== this.state.fromFrecuency[4]
+                           &&
+                           date.getDay() !== this.state.fromFrecuency[5]
+                           &&
+                           date.getDay() !== this.state.fromFrecuency[6]
+                        }
                         />
                       </MDBRow>
                     </MDBModal>
@@ -885,6 +897,20 @@ class index extends Component {
                         value={this.state.dateVuelta}
                         className="black-text"
                         minDate={this.state.dateIda}
+                        tileDisabled={({date}) => date.getDay() !== this.state.toFrecuency[0]
+                        && 
+                        date.getDay() !== this.state.toFrecuency[1]
+                        &&
+                        date.getDay() !== this.state.toFrecuency[2]
+                        &&
+                        date.getDay() !== this.state.toFrecuency[3]
+                        &&
+                        date.getDay() !== this.state.toFrecuency[4]
+                        &&
+                        date.getDay() !== this.state.toFrecuency[5]
+                        &&
+                        date.getDay() !== this.state.toFrecuency[6]
+                      }
                         />
                       </MDBRow>
                     </MDBModal>
