@@ -11,7 +11,7 @@ import {
 } from "mdbreact";
 import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import Calendar from 'react-calendar'
 
 // Axios para hacer los llamados a API's
@@ -539,7 +539,9 @@ class index extends Component {
       vuelos: [],
       isFetch: 'true',
       fromFrecuency: [],
-      toFrecuency: []
+      toFrecuency: [],
+      redireccion: false,
+      botonContinuar: true,
     } 
   }
 
@@ -631,6 +633,18 @@ class index extends Component {
     this.setState({
       modalVuelta: !this.state.modalVuelta
     });
+  }
+
+  setRedireccion = () =>{
+    this.setState({
+      redireccion: true
+    })
+  }
+
+  redireccion = () => {
+    if (this.state.redireccion) {
+      return <Redirect to='/Pasajeros' />
+    }
   }
 
   onChangeIda = dateIda => this.setState({ dateIda, modalIda: !this.state.modalIda })
@@ -919,11 +933,10 @@ class index extends Component {
             </MDBRow>
             <MDBRow  id="secondary">
               <MDBCol>
-                <Link to="/Pasajeros">
-                  <MDBRow center>
-                    <MDBBtn className="z-depth-2" block color="orange">Reservar</MDBBtn>
-                  </MDBRow>
-                </Link>
+                <MDBRow center>
+                  {this.redireccion()}
+                  <MDBBtn disabled={this.state.botonContinuar} onClick={this.setRedireccion} className="z-depth-2" block color="orange">Reservar</MDBBtn>
+                </MDBRow>
                 <MDBRow className="mt-3">
                   <MDBCol>
                     <MDBRow className="z-depth-2 colorConviasa py-3" between>
