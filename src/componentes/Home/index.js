@@ -7,7 +7,10 @@ import {
   MDBCollapse,
   MDBModal, 
   MDBView,
-  MDBTooltip
+  MDBTooltip,
+  MDBModalBody,
+  MDBModalHeader,
+  MDBModalFooter
 } from "mdbreact";
 import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
@@ -521,6 +524,33 @@ class VueloVuelta extends Component {
 }
 
 
+export class TiempoFinalizado extends Component {
+  state = {
+    modalTiempoFinalizado: true
+  }
+  
+  toggle = () => {
+    this.setState({
+      modalTiempoFinalizado: !this.state.modalTiempoFinalizado
+    });
+  }
+  render() {
+    return (
+      <div>
+        <MDBModal isOpen={this.state.modalTiempoFinalizado} toggle={this.toggle}>
+          <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
+          <MDBModalBody>
+            (...)
+          </MDBModalBody>
+          <MDBModalFooter>
+            <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
+            <MDBBtn color="primary">Save changes</MDBBtn>
+          </MDBModalFooter>
+        </MDBModal>
+      </div>
+    )
+  }
+}
 
 
 class index extends Component {
@@ -542,11 +572,12 @@ class index extends Component {
       toFrecuency: [],
       redireccion: false,
       botonContinuar: true,
+      returnPage: "conviasa.aero"
     } 
   }
 
   
-  componentDidMount() {
+  componentWillMount() {
 
     const url = `/Airavailrs`;
 
@@ -587,6 +618,63 @@ class index extends Component {
     
     
   }
+
+  // componentDidMount() {
+  //   const Minutes = 5
+  //   this.startTimer(Minutes)
+  //   /* this.showTimeOut = true
+  //   this.timeout = setTimeout(function cerrar() {window.location.href = this.state.returnPage}, 30000 ) */
+  // }
+
+
+  // restartTimer() {
+  //   const fiveMinutes = 60 * 7
+
+  //   this.startTimer(fiveMinutes)
+  //   this.showTimeOut = false
+  //   clearTimeout(this.timeout)
+  // }
+
+
+  // startTimer(duration) {
+  // we don't want to wait a full second before the timer starts
+  //   let start = Date.now()
+  //   let diff
+  //   let minutes
+  //   let seconds
+
+  //   function _timer() {
+  //     // get the number of seconds that have elapsed since
+  //     // startTimer() was called
+
+  //     diff = duration - (((Date.now() - start) / 1000) | 0)
+
+  //     // does the same job as parseInt truncates the float
+  //     if (diff <= 0) {
+  //       // add one second so that the count down starts at the full duration
+  //       // example 05:00 not 04:59
+  //       // start = Date.now() + 1000
+
+  //       if (diff === 0) {
+  //         console.log('tiempo restante:', diff)
+  //         return ( 
+  //         <TiempoFinalizado />
+          
+  //       }
+
+  //     } else {
+  //       minutes = (diff / 60) | 0
+  //       seconds = diff % 60 | 0
+
+  //       minutes = minutes < 10 ? '0' + minutes : minutes
+  //       seconds = seconds < 10 ? '0' + seconds : seconds
+  //     }
+  //   }
+  //   _timer()
+  //   setInterval(_timer, 1000)
+  // }
+
+
   
   from(ida, vuelta) {
     const dates = frecuencias[ida];
