@@ -552,6 +552,33 @@ export class TiempoFinalizado extends Component {
   }
 }
 
+export class RenderizadoPrueba extends Component{
+
+  constructor(props){
+    super(props);
+    this.state ={
+      nroRenderElemento: 4
+    }
+  }
+
+  componentDidMount(){
+      for (let indexRender = 0; indexRender < this.state.nroRenderElemento; indexRender++) {
+      const nroRender = [indexRender];
+      console.log('nro de render:', nroRender)
+    }
+  }
+
+  render(){
+    return(
+      <div> 
+        
+      </div>
+    )
+  }
+}
+
+
+
 
 class index extends Component {
 
@@ -574,7 +601,6 @@ class index extends Component {
     } 
   }
 
-  
   componentWillMount() {
 
     const url = `/Airavailrs`;
@@ -599,6 +625,7 @@ class index extends Component {
       }
     }
 
+    
     axios({
       method: 'post',
       url: url,
@@ -613,8 +640,6 @@ class index extends Component {
       console.log('Frecuencias Ida:',this.state.fromFrecuency)
       console.log('Frecuencias Vuelta:',this.state.toFrecuency)
     })
-    
-    
   }
 
   // componentDidMount() {
@@ -677,7 +702,6 @@ class index extends Component {
   from(ida, vuelta) {
     const dates = frecuencias[ida];
     const {from, to} = dates[vuelta];
-
     return [from, to]
   }
 
@@ -724,6 +748,7 @@ class index extends Component {
   onChangeIda = dateIda => this.setState({ dateIda, modalIda: !this.state.modalIda })
   onChangeVuelta = dateVuelta => this.setState({ dateVuelta, modalVuelta: !this.state.modalVuelta })
 
+
   render() {
 
     if (this.state.isFetch) {
@@ -738,6 +763,7 @@ class index extends Component {
     
     return (
       <div className="marginTop">
+        <RenderizadoPrueba/>
         <ShowAt breakpoint="mediumAndBelow">
           <MDBRow center>
             <MDBBtn className="mb-1 caja" size="lg" block color="orange">Salir</MDBBtn>
