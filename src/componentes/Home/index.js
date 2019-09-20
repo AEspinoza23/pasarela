@@ -149,7 +149,7 @@ import frecuencias from '../../helpers/frecuencias'
                 <MDBRow>
                   <MDBCol>
                     <MDBRow>
-                      <strong></strong>
+                      <strong>Ciudad</strong>
                     </MDBRow>
                     <MDBRow>
                       <strong>12:30</strong>
