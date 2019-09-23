@@ -664,7 +664,7 @@ const mapMaletas = {
       maleta: 1
     },
     primera: {
-      mano: t1,
+      mano: 1,
       maleta: 1
     }
   }

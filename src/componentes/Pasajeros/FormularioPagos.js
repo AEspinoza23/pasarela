@@ -38,7 +38,85 @@ function PagaloFacilDebito() {
 
 function PagaloFacilTrf(){
   return <div className="colorAccent caja">
-    mensaje PagaloFacilTrf
+    <MDBCol>
+      <MDBRow center id="secondary" className="my-3">
+        <div>
+          <MDBIcon icon="info-circle" /> Por los momentos solo serán procesadas transferencias 
+          desde los bancos listados al Banco del Tesoro. Si usted 
+          realiza la transferencia desde otro banco no listado, no será procesada.
+        </div>
+        <div>
+          <MDBIcon icon="info-circle" /> Para soporte o requerimientos: ingresar en el portal web en la pestaña "Atención al Pasajero".
+        </div>
+      </MDBRow>
+      <MDBRow id="accent">
+        <div className="h5">Instrucciones de pago</div>
+      </MDBRow>
+      <MDBRow id="accent">
+        <MDBCol left sm="12" xl="6"  className="my-3">
+          <div className="h5 text-justify" >
+            <span className="h3">1) </span> Solo transferir el monto completo desde el:
+          </div>
+          <div className="text-justify">
+            <div>
+              BANESCO BANCO UNIVERSAL, C.A.
+            </div>
+            <div>
+              BANCO DE VENEZUELA, S.A. BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCO NACIONAL DE CREDITO C.A
+            </div>
+            <div>
+              BANCO PROVINCIAL, S.A BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCO ACTIVO, BANCO UNIVERSAL
+            </div>
+            <div>
+              BANPLUS ENTIDAD DE AHORRO Y PRESTAMO C.A
+            </div>
+            <div>
+              BANCO PLAZA, C.A
+            </div>
+            <div>
+              BANCO MERCANTIL, C.A., BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCO FONDOCOMUN, C.A., BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCARIBE C.A
+            </div>
+            <div>
+              BANPLUS BANCO UNIVERSAL
+            </div>
+            <div>
+              VENEZOLANO DE CREDITO S.A. BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCO EXTERIOR, C.A., BANCO UNIVERSAL
+            </div>
+            <div>
+              BANCAMIGA BANCO UNIVERSAL
+            </div>
+          </div>
+            </MDBCol>
+        <MDBCol sm="12" xl="6"  className="my-3 text-justify">
+          <span className="h3">2) </span>
+          Las instrucciones detalladas serán enviadas al correo electrónico ingresado por el pagador.
+        </MDBCol>
+        <MDBCol sm="12" xl="6" className="text-justify">
+          <span className="h3">3) </span>
+          La emisión del boleto se hará efectiva el día hábil siguiente después de las 8:00pm.
+          RECUERDA QUE TIENES DOS (02) HORAS PARA REALIZAR LA TRANSFERENCIA Y COMPLETAR LA COMPRA.
+        </MDBCol>
+        <MDBCol sm="12" xl="6" className="text-justify">
+          <span className="h3">4) </span>
+          Para completar la transaccón debe oprimir el botón "Continuar".
+        </MDBCol>
+      </MDBRow>
+    </MDBCol>
   </div>
 }
 

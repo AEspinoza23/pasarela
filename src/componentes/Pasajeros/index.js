@@ -78,7 +78,7 @@ class index extends Component {
                           <option value="3">Three</option>
                         </select>
                       }
-                    />
+                    /> 
                     </MDBCol>
                     <MDBCol md="3">
                       <MDBInput type="text" label="Primer Nombre" />
@@ -100,9 +100,10 @@ class index extends Component {
                           <option value="1">One</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
+                          <option value="4">Kuatro</option>
                         </select>
                       }
-                    />
+                    /> 
                     </MDBCol>
                     <MDBCol md="6">
                       <MDBInput type="number" label="Cedula de Identidad" />
