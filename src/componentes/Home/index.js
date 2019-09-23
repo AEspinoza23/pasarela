@@ -16,9 +16,7 @@ import "../../index.css";
 import { HideAt, ShowAt } from 'react-with-breakpoints';
 import { Redirect } from 'react-router-dom'
 import Calendar from 'react-calendar'
-import Test from '../Test.js';
 import { determineMeals, determineEquip, determineCity, determineMaletas, determineClasses, sleep  } from '../../helpers';
-
 
 // Axios para hacer los llamados a API's
 import axios from 'axios'
@@ -679,8 +677,7 @@ class index extends Component {
     } 
   }
 
-  
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
 
     const url = `/Airavailrs`;
 
