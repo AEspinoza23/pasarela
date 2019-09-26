@@ -5,6 +5,10 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "./index.css";
 
+//redux store
+import { Provider } from 'react-redux'
+import store from './redux/store/home'
+
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import { BreakpointsProvider } from 'react-with-breakpoints';
@@ -20,9 +24,11 @@ const breakpoints = {
 }
 
 ReactDOM.render(
-  <Router>
-    <BreakpointsProvider breakpoints={ breakpoints }>
-      <AppRoutes />
-    </BreakpointsProvider>
-  </Router>,
+  <Provider store={store}>  
+    <Router>
+      <BreakpointsProvider breakpoints={ breakpoints }>
+        <AppRoutes />
+      </BreakpointsProvider>
+    </Router>
+  </Provider>,
   document.getElementById('root'));

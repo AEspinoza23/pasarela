@@ -6,6 +6,10 @@ import {ShowAt, HideAt} from 'react-with-breakpoints'
 import axios from 'axios';
 //const API_URL = 'http://kiu.surnet.io:8080';
 
+const mapStateToProps = state => {
+  return { datosVuelo: state.vuelo }
+}
+
 class VueloIda extends Component {
 
   constructor(props){
@@ -87,7 +91,7 @@ class VueloIda extends Component {
           vueloIdaSegDuration: vueloIdaSegDuration,
           vueloIdaSegEquipType: vueloIdaSegEquipType,
           vueloIdaSegFlyghtNumber: vueloIdaSegFlyghtNumber,
-          vueloIdaSegment: vueloIdaSegmealtype,
+          vueloIdaMeal: vueloIdaSegmealtype,
         })
         console.log(this.state.vuelos);
     })

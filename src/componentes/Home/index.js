@@ -20,8 +20,10 @@ import VueloVuelta from '../Home/VueloVuelta'
 import VueloIda from '../Home/VueloIda'
 import { determineMeals, determineEquip, determineCity, determineMaletas, determineClasses, sleep  } from '../../helpers';
 
-// Axios para hacer los llamados a API's
-import axios from 'axios'
+// react-redux store
+import { connect } from "react-redux"
+import { airAvail } from "../../redux/actions/home"
+
 //const API_URL = 'http://kiu.surnet.io:8080';
 
 //helpers
@@ -84,9 +86,6 @@ export class RenderizadoPrueba extends Component{
   }
 }
 
-
-
-
 class index extends Component {
 
   constructor(props){
@@ -105,53 +104,16 @@ class index extends Component {
       fromFrecuency: [],
       toFrecuency: [],
       redireccion: false,
-      botonContinuar: true,
+      botonContinuar: false,
       returnPage: "conviasa.aero",
       checkIda: false,
       checkVuelta: false
     } 
   }
 
-  UNSAFE_componentWillMount() {
-
-    const url = `/Airavailrs`;
-
-    let datosVuelos = {
-      direct_flight: false,
-      go_info: {
-        origin: "CCS", 
-        destination: "PMV", 
-        date: "2019-11-11"
-      },
-      back_info: {
-        origin: "PMV", 
-        destination: "CCS", 
-        date: "2019-11-15"
-      }, 
-      max_stops: 0,
-      passangers_info: {
-        adt: 1,
-        cnn: 0, 
-        inf: 0
-      }
+    componentDidMount() {
+      this.props.airAvail();
     }
-
-    
-    axios({
-      method: 'post',
-      url: url,
-      data: datosVuelos,
-      headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'},
-    }).then(response => response.data)
-    .then((data) => {
-      this.setState({vuelos: data, isFetch: false})  
-      let [fromFrecuency, toFrecuency] = this.from(datosVuelos.go_info.origin, datosVuelos.go_info.destination)
-      this.setState({fromFrecuency: fromFrecuency, toFrecuency: toFrecuency})
-      console.log('datos de vuelos:',this.state.vuelos)
-      console.log('Frecuencias Ida:',this.state.fromFrecuency)
-      console.log('Frecuencias Vuelta:',this.state.toFrecuency)
-    })
-  }
 
   // componentDidMount() {
   //   const Minutes = 5
@@ -290,17 +252,6 @@ class index extends Component {
   }
 
   render() {
-
-    if (this.state.isFetch) {
-      return(
-        <div className="mt-5 h1 marginTop">
-          <MDBCol className="marginTop">
-            cargando petición...  
-          </MDBCol>
-        </div>
-      )    
-    }
-    
     return (
       <div className="marginTop">
         <RenderizadoPrueba/>
@@ -643,5 +594,13 @@ class index extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    vuelo: state.vuelo
+  };
+}
 
-export default index
+export default connect(
+  mapStateToProps,
+  { airAvail }
+)(index)

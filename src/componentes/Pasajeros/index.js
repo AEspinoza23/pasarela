@@ -11,8 +11,13 @@ import {
 import "../../index.css"
 import { Link } from 'react-router-dom'
 import { SelectorPagos } from './FormularioPagos'
+import { connect } from 'react-redux'
 
-class index extends Component {
+const mapStateToProps = state => {
+  return { datosVuelo: state.vuelo }
+}
+
+class pasajeros extends Component {
 
   state = {
     collapseIDAdulto: true,
@@ -45,7 +50,9 @@ class index extends Component {
     }));
   }
 
-  
+  componentDidMount(){
+    console.log(this.props.datosVuelo)
+  }
 
   render() {
     return (
@@ -359,5 +366,7 @@ class index extends Component {
     )
   }
 }
+
+const index = connect(mapStateToProps)(pasajeros)
 
 export default index
