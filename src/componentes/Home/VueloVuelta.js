@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import {MDBRow, MDBCol, MDBIcon, MDBCollapse} from 'mdbreact'
-import {ShowAt} from 'react-with-breakpoints'
+import { MDBRow, MDBCol, MDBIcon, MDBCollapse } from 'mdbreact'
+import { ShowAt } from 'react-with-breakpoints'
+import { connect } from 'react-redux'
 
-class VueloVuelta extends Component {
+const mapStateToProps = state => {
+  return { datosVuelo: state.vuelo }
+}
+
+class vuelta extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -12,26 +17,6 @@ class VueloVuelta extends Component {
       collapseEconomica2Vuelta: false,
       collapseEjecutivaVuelta: false,
       collapsePClaseVuelta: false,
-      // //Vuelos Clase Vuelta
-      // vueloVueltaClase: [],
-      // vueloVueltaClaseTrusted: [], 
-      // //Segment content Vuelta
-      // vueloVueltaSegment: [],
-      // vueloVueltaSegSQuantity: [],
-      // vueloVueltaSegArriLocation: [],
-      // vueloVueltaSegArriTime: [],
-      // vueloVueltaSegCabin: [],
-      // vueloVueltaSegDepLocation: [],
-      // vueloVueltaSegDepTime: [],
-      // vueloVueltaSegDuration: [],
-      // vueloVueltaSegEquipType: [],
-      // vueloVueltaSegFlyghtNumber: [],
-      // vueloVueltaSegmealtype: [],
-      // //default content Vuelta
-      // vueloVueltaDefaultD: [],
-      // vueloVueltaDefaultDes: [],
-      // vueloVueltaDefaultO: [], 
-
     };
   }
 
@@ -274,5 +259,7 @@ class VueloVuelta extends Component {
     )
   }
 }
+
+const VueloVuelta = connect(mapStateToProps)(vuelta)
 
 export default VueloVuelta

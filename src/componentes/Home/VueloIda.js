@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import {MDBRow, MDBCol, MDBIcon, MDBCollapse} from 'mdbreact'
-import {ShowAt, HideAt} from 'react-with-breakpoints'
-
-//Axios para hacer los llamados a API's
-import axios from 'axios';
+import { MDBRow, MDBCol, MDBIcon, MDBCollapse } from 'mdbreact'
+import { ShowAt, HideAt } from 'react-with-breakpoints'
+import { connect } from 'react-redux'
 //const API_URL = 'http://kiu.surnet.io:8080';
 
 const mapStateToProps = state => {
   return { datosVuelo: state.vuelo }
 }
 
-class VueloIda extends Component {
+class ida extends Component {
 
   constructor(props){
     super(props);
@@ -19,82 +17,7 @@ class VueloIda extends Component {
       collapseEconomica2Ida: false,
       collapseEjecutivaIda: false,
       collapsePClaseIda: false,
-      //Segment content Ida
-      vueloIdaSegment: [],
-      vueloIdaSegSQuantity: [],
-      vueloIdaSegArriLocation: [],
-      vueloIdaSegArriTime: [],
-      vueloIdaSegCabin: [],
-      vueloIdaSegDepLocation: [],
-      vueloIdaSegDepTime: [],
-      vueloIdaSegDuration: [],
-      vueloIdaSegEquipType: [],
-      vueloIdaSegFlyghtNumber: [],
-      vueloIdaSegmealtype: [],
-      //default content Ida
-      vueloIdaDefaultD: [],
-      vueloIdaDefaultDes: [],
-      vueloIdaDefaultO: []
     }
-  }
-
-  componentDidMount() {
-    const url = `/Airavailrs`;
-
-    let datosVuelos = {
-      direct_flight: false,
-      go_info: {
-        origin: "CCS",
-        destination: "PMV",
-        date: "2019-11-11"
-      },
-      back_info: {
-        origin: "PMV",
-        destination: "CSS",
-        date: "2019-11-15"
-      },
-      max_stops: 0,
-      passangers_info: {
-        adt: 1,
-        cnn: 0,
-        inf: 0
-      }
-    }
-    axios({
-      method: 'post',
-      url: url,
-      data: datosVuelos,
-      headers: {'Content-Type':'application/json', 'Authorization':'R7c2CS4SYUGpyB31afs/TqcWX6Nuw9JrvsNwobyh5me/UoLdL6e0GxVNoqC3k2Zq'}
-    }).then(response => response.data)
-    .then((data,
-          vueloIdaSegment,
-          vueloIdaSegSQuantity,
-          vueloIdaSegArriLocation,
-          vueloIdaSegArriTime,
-          vueloIdaSegCabin,
-          vueloIdaSegDepLocation,
-          vueloIdaSegDepTime,
-          vueloIdaSegDuration,
-          vueloIdaSegEquipType,
-          vueloIdaSegFlyghtNumber,
-          vueloIdaSegmealtype) => {
-        this.setState({
-          vuelo: data,
-          isFetch: false,
-          vueloIdaSegment: vueloIdaSegment,
-          vueloIdaSegQuantity: vueloIdaSegSQuantity,
-          vueloIdaSegArriLocation: vueloIdaSegArriLocation,
-          vueloIdaSegArriTime: vueloIdaSegArriTime,
-          vueloIdaSegCabin: vueloIdaSegCabin,
-          vueloIdaSegDepLocation: vueloIdaSegDepLocation,
-          vueloIdaSegDepTime: vueloIdaSegDepTime,
-          vueloIdaSegDuration: vueloIdaSegDuration,
-          vueloIdaSegEquipType: vueloIdaSegEquipType,
-          vueloIdaSegFlyghtNumber: vueloIdaSegFlyghtNumber,
-          vueloIdaMeal: vueloIdaSegmealtype,
-        })
-        console.log(this.state.vuelos);
-    })
   }
 
   toggleCollapseEconomicaIda = collapseEconomicaIda => () => {
@@ -337,5 +260,7 @@ class VueloIda extends Component {
     )
   }
 }
+
+const VueloIda = connect(mapStateToProps)(ida)
 
 export default VueloIda

@@ -29,10 +29,6 @@ import { airAvail } from "../../redux/actions/home"
 //helpers
 import frecuencias from '../../helpers/frecuencias'
 
- 
-
-
-
 export class TiempoFinalizado extends Component {
   state = {
     modalTiempoFinalizado: true
@@ -56,31 +52,6 @@ export class TiempoFinalizado extends Component {
             <MDBBtn color="primary">Save changes</MDBBtn>
           </MDBModalFooter>
         </MDBModal>
-      </div>
-    )
-  }
-}
-
-export class RenderizadoPrueba extends Component{
-
-  constructor(props){
-    super(props);
-    this.state ={
-      nroRenderElemento: 2
-    }
-  }
-
-  componentDidMount(){
-      for (let indexRender = 0; indexRender < this.state.nroRenderElemento; indexRender++) {
-      const nroRender = [indexRender];
-      console.log('nro de render:', nroRender)
-    }
-  }
-
-  render(){
-    return(
-      <div> 
-        
       </div>
     )
   }
@@ -169,8 +140,6 @@ class index extends Component {
   //   _timer()
   //   setInterval(_timer, 1000)
   // }
-
-
   
   from(ida, vuelta) {
     const dates = frecuencias[ida];
@@ -254,7 +223,6 @@ class index extends Component {
   render() {
     return (
       <div className="marginTop">
-        <RenderizadoPrueba/>
         <ShowAt breakpoint="mediumAndBelow">
           <MDBRow center>
             <MDBBtn className="mb-1 caja" size="lg" block color="orange">Salir</MDBBtn>
