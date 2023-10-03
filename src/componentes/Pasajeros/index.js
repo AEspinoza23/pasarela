@@ -64,7 +64,7 @@ class pasajeros extends Component {
                 <MDBRow className="colorConviasa caja py-3 mb-1">
                   <strong className="white-text h5 ml-3">Datos de Pasajero</strong> 
                 </MDBRow>
-                <MDBRow className="colorConviasa caja py-3" between>
+                <MDBRow className="colorConviasa caja py-3 " between>
                   <strong className="text-left h5 white-text ml-3">Introduzca los datos (Adulto)</strong>
                   <MDBIcon icon="angle-down" size="2x" className="white-text mr-3 cursorSenal" onClick={this.toggleCollapseAdulto("DatosAdulto")}/>
                 </MDBRow>
